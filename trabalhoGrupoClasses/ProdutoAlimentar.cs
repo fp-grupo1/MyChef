@@ -11,7 +11,7 @@ namespace trabalhoGrupoClasses
         private string p_idCod;
         private string p_nome;
         private double p_custo;
-        private double p_vMProteina;
+        private double p_vMProteinas;
         private double p_vMLipidos;
         private double p_vMHidratos;
         private bool p_alergenio;
@@ -39,10 +39,10 @@ namespace trabalhoGrupoClasses
         }
 
         // g/100g
-        public double VMProteina
+        public double VMProteinas
         {
-            get { return p_vMProteina; }
-            set { p_vMProteina = value; }
+            get { return p_vMProteinas; }
+            set { p_vMProteinas = value; }
         }
 
         // g/100g
@@ -97,7 +97,7 @@ namespace trabalhoGrupoClasses
             int proteina = 4;
             int hidratos = 4;
             double resultado = 0;
-            resultado = p_vMLipidos * lipidos +p_vMHidratos * hidratos + p_vMProteina * proteina;
+            resultado = p_vMLipidos * lipidos +p_vMHidratos * hidratos + p_vMProteinas * proteina;
             return resultado;
         }
 
@@ -172,7 +172,7 @@ namespace trabalhoGrupoClasses
             p_idCod = codigo;
             p_nome = nome;
             p_custo = 0;
-            p_vMProteina = 0;
+            p_vMProteinas = 0;
             p_vMLipidos = 0;
             p_vMHidratos = 0;
             p_alergenio = true;            
