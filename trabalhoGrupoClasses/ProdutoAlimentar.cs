@@ -140,9 +140,23 @@ namespace trabalhoGrupoClasses
             
         }
 
+        // Recebendo um nome e o custo do produto, incrementando o número de distribuidores se não ultrapassar o número máximo de distribuidores
+        // Devolve o sucesso de atualizar o distribuidor principal, caso o custo seja inferior ao custo do distribuidor atual
+        public bool RegistarDistribuidor(string nome, double custo)
+        {
+            if (p_custo == 0 || custo < p_custo)
+            {
+                RemoverDistribuidor();
+                p_custo = custo;
+                p_nomeDistribuidorPrincipal = nome;
+            }
+
+            return RegistarDistribuidor();
+        }
+
         // Devolve o sucesso ou não do registo de um novo distribuidor,
         // incrementando o número de distribuidores se não ultrapassar o número máximo de distribuidores
-        private bool RemoverDistribuidor()
+        public bool RemoverDistribuidor()
         {
             if (NumDistribuidores == NumMaxDistribuidores)
             {
@@ -152,20 +166,7 @@ namespace trabalhoGrupoClasses
             else return false;
 
         }
-
-        // Recebendo um nome e o custo do produto, incrementando o número de distribuidores se não ultrapassar o número máximo de distribuidores
-        // Devolve o sucesso de atualizar o distribuidor principal, caso o custo seja inferior ao custo do distribuidor atual
-        public bool RegistarDistribuidor(string nome, double custo)
-        {           
-            if (custo < p_custo)
-            {
-                RemoverDistribuidor();
-                p_custo = custo;
-                p_nomeDistribuidorPrincipal = nome;               
-            }
-
-            return RegistarDistribuidor();
-        }
+        
 
         public ProdutoAlimentar(string codigo, string nome, double peso, int maxDistribuidores)
         {

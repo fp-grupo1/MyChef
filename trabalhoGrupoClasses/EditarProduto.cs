@@ -15,6 +15,7 @@ namespace trabalhoGrupoClasses
         ProdutoAlimentar produto;
 
         private Form m_formPai;
+
         public EditarProduto(Form formPai)
         {
             InitializeComponent();
@@ -24,7 +25,7 @@ namespace trabalhoGrupoClasses
         public void PRODUTOTESTE()
         {
             //produto = new ProdutoNatural("pn123", "Teste", 300);
-            produto = new ProdutoProcessado("pn123", "Teste", 300, "Teste");
+            //produto = new ProdutoProcessado("pn123", "Teste", 300, "Teste");
             produto = new RefeicaoPronta("pn123", "Teste", 300, "Teste");
         }
 
@@ -185,6 +186,12 @@ namespace trabalhoGrupoClasses
         private void btnGuardarAlteracoes_Click(object sender, EventArgs e)
         {
             GuardarAlteracoes();
+
+            MessageBox.Show("As alterações foram guardadas.", "Alteração do Produto", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            m_formPai.Location = this.Location;
+            this.Hide();
+            m_formPai.Show();
         }
 
         private void btnApagarProduto_Click(object sender, EventArgs e)
