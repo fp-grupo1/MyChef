@@ -72,7 +72,7 @@ namespace trabalhoGrupoClasses
             txtCodigoID.Text = produto.IdCod.ToString();
             txtNomeProduto.Text = produto.Nome;
             txtPeso.Text = produto.Peso.ToString();
-            txtCusto.Text = produto.Custo.ToString();
+            numCusto.Value = Convert.ToDecimal(produto.Custo);
             cbAlergénios.Checked = produto.Alergenios;
 
             PopularNutricionais();
@@ -131,7 +131,7 @@ namespace trabalhoGrupoClasses
             //Geral
             produto.Nome = txtNomeProduto.Text;
             produto.Peso = Convert.ToInt32(txtPeso.Text);
-            produto.Custo = Convert.ToDouble(txtCusto.Text);
+            produto.Custo = Convert.ToDouble(numCusto.Value);
             produto.Alergenios = cbAlergénios.Checked;
 
             produto.VMHidratos = Convert.ToDouble(numHidratos.Value);
@@ -206,6 +206,13 @@ namespace trabalhoGrupoClasses
                 m_formPai.Show();
             }
 
+        }
+
+        private void btnCalcular_Click(object sender, EventArgs e)
+        {
+            produto.Custo = Convert.ToDouble(numCusto.Value);
+            txtMargem.Text = produto.CalcMargem().ToString();
+            txtPVP.Text = produto.CalcPVP().ToString();
         }
     }
 }
