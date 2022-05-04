@@ -11,6 +11,8 @@ namespace trabalhoGrupoClasses
         private string p_modoPreparacao;
         private int p_tempoPreparacao;
         private bool p_gourmet;
+        private bool p_gourmet;
+
 
         public string ModoPreparacao
         {
@@ -34,8 +36,8 @@ namespace trabalhoGrupoClasses
         public override double CalcMargem()
         {
             double resultado = 0;
-            if (Gourmet)
-            {
+            if (Gourmet) 
+            {        
                 resultado = Custo * 0.2;
             }
             else resultado = base.CalcMargem();
