@@ -67,7 +67,7 @@ namespace trabalhoGrupoClasses
         private void RegistarInfoProduto()
         {
             produtoAlimentar.Custo = Convert.ToDouble(txtCusto.Text);
-            produtoAlimentar.VMProteina = Convert.ToDouble(numProteinas.Value);
+            produtoAlimentar.VMProteinas = Convert.ToDouble(numProteinas.Value);
             produtoAlimentar.VMLipidos = Convert.ToDouble(numLipidos.Value);
             produtoAlimentar.VMHidratos = Convert.ToDouble(numHidratos.Value);
             produtoAlimentar.Alergenios = chAlergénios.Checked;
