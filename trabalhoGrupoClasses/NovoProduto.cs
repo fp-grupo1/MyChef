@@ -132,7 +132,7 @@ namespace trabalhoGrupoClasses
 
         private void ApagarInformaçãoAnteriorProduto()
         {
-            txtCodigoID.Text = "";
+            txtCodigoID.Text = "teste";
             txtNomeProduto.Text = "";
             txtPeso.Text = "";
             txtCusto.Text = "";
