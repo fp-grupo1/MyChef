@@ -101,6 +101,11 @@
             // txtCustoNovoProd
             // 
             this.txtCustoNovoProd.Location = new System.Drawing.Point(389, 58);
+            this.txtCustoNovoProd.Maximum = new decimal(new int[] {
+            10000,
+            0,
+            0,
+            0});
             this.txtCustoNovoProd.Name = "txtCustoNovoProd";
             this.txtCustoNovoProd.Size = new System.Drawing.Size(120, 22);
             this.txtCustoNovoProd.TabIndex = 41;
