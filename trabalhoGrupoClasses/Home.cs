@@ -156,7 +156,9 @@ namespace trabalhoGrupoClasses
 
         private void btnInfoNutricinal_Click(object sender, EventArgs e)
         {
-            formInfoNutricional = new InfoNutricional();
+
+            ProdutoAlimentar produtoAMostrar = dgProdutos.SelectedRows[0].DataBoundItem as ProdutoAlimentar;
+            formInfoNutricional = new InfoNutricional (this, produtoAMostrar);
 
             formInfoNutricional.Location = this.Location;
             this.Hide();
