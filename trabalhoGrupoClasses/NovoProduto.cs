@@ -125,6 +125,11 @@ namespace trabalhoGrupoClasses
                 txtPVP.Text = Convert.ToString(produtoAlimentar.CalcPVP());
             }
         }
+        private void btnCriarNovo_Click(object sender, EventArgs e)
+        {
+
+        }
+
         private void ApagarInformaçãoAnteriorProduto()
         {
             txtCodigoID.Text = "";

@@ -73,11 +73,12 @@
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
-            this.txtMargem = new System.Windows.Forms.TextBox();
-            this.txtPVP = new System.Windows.Forms.TextBox();
-            this.btnCalcular = new System.Windows.Forms.Button();
-            this.label15 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.btnCalcular = new System.Windows.Forms.Button();
+            this.txtPVP = new System.Windows.Forms.TextBox();
+            this.txtMargem = new System.Windows.Forms.TextBox();
+            this.btnCriarNovo = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numProteinas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numLipidos)).BeginInit();
@@ -94,7 +95,7 @@
             // 
             // btnDistribuidores
             // 
-            this.btnDistribuidores.Location = new System.Drawing.Point(450, 570);
+            this.btnDistribuidores.Location = new System.Drawing.Point(450, 545);
             this.btnDistribuidores.Margin = new System.Windows.Forms.Padding(2);
             this.btnDistribuidores.Name = "btnDistribuidores";
             this.btnDistribuidores.Size = new System.Drawing.Size(127, 45);
@@ -116,7 +117,7 @@
             // btnRegistoProduto
             // 
             this.btnRegistoProduto.Enabled = false;
-            this.btnRegistoProduto.Location = new System.Drawing.Point(450, 515);
+            this.btnRegistoProduto.Location = new System.Drawing.Point(450, 495);
             this.btnRegistoProduto.Margin = new System.Windows.Forms.Padding(2);
             this.btnRegistoProduto.Name = "btnRegistoProduto";
             this.btnRegistoProduto.Size = new System.Drawing.Size(128, 26);
@@ -594,23 +595,25 @@
             this.groupBox6.TabIndex = 123;
             this.groupBox6.TabStop = false;
             // 
-            // txtMargem
+            // label16
             // 
-            this.txtMargem.Enabled = false;
-            this.txtMargem.Location = new System.Drawing.Point(12, 34);
-            this.txtMargem.Margin = new System.Windows.Forms.Padding(2);
-            this.txtMargem.Name = "txtMargem";
-            this.txtMargem.Size = new System.Drawing.Size(87, 20);
-            this.txtMargem.TabIndex = 121;
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(105, 104);
+            this.label16.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(13, 13);
+            this.label16.TabIndex = 125;
+            this.label16.Text = "€";
             // 
-            // txtPVP
+            // label15
             // 
-            this.txtPVP.Enabled = false;
-            this.txtPVP.Location = new System.Drawing.Point(12, 101);
-            this.txtPVP.Margin = new System.Windows.Forms.Padding(2);
-            this.txtPVP.Name = "txtPVP";
-            this.txtPVP.Size = new System.Drawing.Size(87, 20);
-            this.txtPVP.TabIndex = 122;
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(105, 37);
+            this.label15.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(13, 13);
+            this.label15.TabIndex = 124;
+            this.label15.Text = "€";
             // 
             // btnCalcular
             // 
@@ -623,31 +626,42 @@
             this.btnCalcular.UseVisualStyleBackColor = true;
             this.btnCalcular.Click += new System.EventHandler(this.btnCalcular_Click);
             // 
-            // label15
+            // txtPVP
             // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(105, 37);
-            this.label15.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(13, 13);
-            this.label15.TabIndex = 124;
-            this.label15.Text = "€";
+            this.txtPVP.Enabled = false;
+            this.txtPVP.Location = new System.Drawing.Point(12, 101);
+            this.txtPVP.Margin = new System.Windows.Forms.Padding(2);
+            this.txtPVP.Name = "txtPVP";
+            this.txtPVP.Size = new System.Drawing.Size(87, 20);
+            this.txtPVP.TabIndex = 122;
             // 
-            // label16
+            // txtMargem
             // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(105, 104);
-            this.label16.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(13, 13);
-            this.label16.TabIndex = 125;
-            this.label16.Text = "€";
+            this.txtMargem.Enabled = false;
+            this.txtMargem.Location = new System.Drawing.Point(12, 34);
+            this.txtMargem.Margin = new System.Windows.Forms.Padding(2);
+            this.txtMargem.Name = "txtMargem";
+            this.txtMargem.Size = new System.Drawing.Size(87, 20);
+            this.txtMargem.TabIndex = 121;
+            // 
+            // btnCriarNovo
+            // 
+            this.btnCriarNovo.Enabled = false;
+            this.btnCriarNovo.Location = new System.Drawing.Point(449, 615);
+            this.btnCriarNovo.Margin = new System.Windows.Forms.Padding(2);
+            this.btnCriarNovo.Name = "btnCriarNovo";
+            this.btnCriarNovo.Size = new System.Drawing.Size(128, 26);
+            this.btnCriarNovo.TabIndex = 124;
+            this.btnCriarNovo.Text = "Criar novo Produto";
+            this.btnCriarNovo.UseVisualStyleBackColor = true;
+            this.btnCriarNovo.Click += new System.EventHandler(this.btnCriarNovo_Click);
             // 
             // NovoProduto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(600, 653);
+            this.Controls.Add(this.btnCriarNovo);
             this.Controls.Add(this.groupBox6);
             this.Controls.Add(this.btnAnterior);
             this.Controls.Add(this.groupBox5);
@@ -737,5 +751,6 @@
         private System.Windows.Forms.Button btnCalcular;
         private System.Windows.Forms.TextBox txtPVP;
         private System.Windows.Forms.TextBox txtMargem;
+        private System.Windows.Forms.Button btnCriarNovo;
     }
 }
