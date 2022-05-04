@@ -16,22 +16,16 @@ namespace trabalhoGrupoClasses
 
         private Form m_formPai;
 
-        public EditarProduto(Form formPai)
+        private ProdutoAlimentar produtoAEditar;
+        public EditarProduto(Form formPai, ProdutoAlimentar produto)
         {
             InitializeComponent();
             m_formPai = formPai;
-        }
-
-        public void PRODUTOTESTE()
-        {
-            //produto = new ProdutoNatural("pn123", "Teste", 300);
-            //produto = new ProdutoProcessado("pn123", "Teste", 300, "Teste");
-            produto = new RefeicaoPronta("pn123", "Teste", 300, "Teste");
+            produtoAEditar = produto;
         }
 
         private void EditarProduto_Load(object sender, EventArgs e)
         {
-            PRODUTOTESTE();
             // Popular Campos ao iniciar
             // Geral
             PopularCampos();

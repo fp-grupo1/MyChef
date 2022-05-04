@@ -62,92 +62,97 @@
             // 
             // btnAnterior
             // 
-            this.btnAnterior.Location = new System.Drawing.Point(26, 25);
-            this.btnAnterior.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnAnterior.Location = new System.Drawing.Point(20, 20);
+            this.btnAnterior.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnAnterior.Name = "btnAnterior";
-            this.btnAnterior.Size = new System.Drawing.Size(45, 33);
+            this.btnAnterior.Size = new System.Drawing.Size(34, 27);
             this.btnAnterior.TabIndex = 99;
             this.btnAnterior.Text = "<";
             this.btnAnterior.UseVisualStyleBackColor = true;
+            this.btnAnterior.Click += new System.EventHandler(this.btnAnterior_Click);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(22, 77);
+            this.label3.Location = new System.Drawing.Point(16, 63);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(97, 24);
+            this.label3.Size = new System.Drawing.Size(80, 19);
             this.label3.TabIndex = 98;
             this.label3.Text = "Produtos";
             // 
             // txtCusto
             // 
-            this.txtCusto.Location = new System.Drawing.Point(777, 154);
-            this.txtCusto.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtCusto.Location = new System.Drawing.Point(583, 125);
+            this.txtCusto.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtCusto.Name = "txtCusto";
-            this.txtCusto.Size = new System.Drawing.Size(115, 22);
+            this.txtCusto.Size = new System.Drawing.Size(87, 20);
             this.txtCusto.TabIndex = 97;
             // 
             // lblCusto
             // 
             this.lblCusto.AutoSize = true;
             this.lblCusto.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCusto.Location = new System.Drawing.Point(773, 125);
+            this.lblCusto.Location = new System.Drawing.Point(580, 102);
+            this.lblCusto.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblCusto.Name = "lblCusto";
-            this.lblCusto.Size = new System.Drawing.Size(51, 19);
+            this.lblCusto.Size = new System.Drawing.Size(44, 16);
             this.lblCusto.TabIndex = 96;
             this.lblCusto.Text = "Custo";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(897, 156);
+            this.label6.Location = new System.Drawing.Point(673, 127);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(14, 16);
+            this.label6.Size = new System.Drawing.Size(13, 13);
             this.label6.TabIndex = 95;
             this.label6.Text = "€";
             // 
             // btnPesquisa
             // 
-            this.btnPesquisa.Location = new System.Drawing.Point(138, 150);
-            this.btnPesquisa.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnPesquisa.Location = new System.Drawing.Point(104, 122);
+            this.btnPesquisa.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnPesquisa.Name = "btnPesquisa";
-            this.btnPesquisa.Size = new System.Drawing.Size(76, 29);
+            this.btnPesquisa.Size = new System.Drawing.Size(57, 24);
             this.btnPesquisa.TabIndex = 94;
             this.btnPesquisa.Text = "Pesquisa";
             this.btnPesquisa.UseVisualStyleBackColor = true;
             // 
             // txtPeso
             // 
-            this.txtPeso.Location = new System.Drawing.Point(616, 154);
-            this.txtPeso.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtPeso.Location = new System.Drawing.Point(462, 125);
+            this.txtPeso.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtPeso.Name = "txtPeso";
-            this.txtPeso.Size = new System.Drawing.Size(115, 22);
+            this.txtPeso.Size = new System.Drawing.Size(87, 20);
             this.txtPeso.TabIndex = 93;
             // 
             // txtNomeProduto
             // 
-            this.txtNomeProduto.Location = new System.Drawing.Point(249, 154);
-            this.txtNomeProduto.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtNomeProduto.Location = new System.Drawing.Point(187, 125);
+            this.txtNomeProduto.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtNomeProduto.Name = "txtNomeProduto";
-            this.txtNomeProduto.Size = new System.Drawing.Size(328, 22);
+            this.txtNomeProduto.Size = new System.Drawing.Size(247, 20);
             this.txtNomeProduto.TabIndex = 92;
             // 
             // txtCodigoID
             // 
-            this.txtCodigoID.Location = new System.Drawing.Point(26, 154);
-            this.txtCodigoID.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtCodigoID.Location = new System.Drawing.Point(20, 125);
+            this.txtCodigoID.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtCodigoID.Name = "txtCodigoID";
-            this.txtCodigoID.Size = new System.Drawing.Size(107, 22);
+            this.txtCodigoID.Size = new System.Drawing.Size(81, 20);
             this.txtCodigoID.TabIndex = 91;
             // 
             // lblCodigoID
             // 
             this.lblCodigoID.AutoSize = true;
             this.lblCodigoID.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCodigoID.Location = new System.Drawing.Point(23, 125);
+            this.lblCodigoID.Location = new System.Drawing.Point(17, 102);
+            this.lblCodigoID.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblCodigoID.Name = "lblCodigoID";
-            this.lblCodigoID.Size = new System.Drawing.Size(83, 19);
+            this.lblCodigoID.Size = new System.Drawing.Size(69, 16);
             this.lblCodigoID.TabIndex = 90;
             this.lblCodigoID.Text = "Código ID";
             // 
@@ -155,9 +160,10 @@
             // 
             this.lblNomeProduto.AutoSize = true;
             this.lblNomeProduto.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNomeProduto.Location = new System.Drawing.Point(246, 125);
+            this.lblNomeProduto.Location = new System.Drawing.Point(184, 102);
+            this.lblNomeProduto.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblNomeProduto.Name = "lblNomeProduto";
-            this.lblNomeProduto.Size = new System.Drawing.Size(113, 19);
+            this.lblNomeProduto.Size = new System.Drawing.Size(97, 16);
             this.lblNomeProduto.TabIndex = 89;
             this.lblNomeProduto.Text = "Nome Produto";
             // 
@@ -165,34 +171,35 @@
             // 
             this.lblPeso.AutoSize = true;
             this.lblPeso.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPeso.Location = new System.Drawing.Point(612, 125);
+            this.lblPeso.Location = new System.Drawing.Point(459, 102);
+            this.lblPeso.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblPeso.Name = "lblPeso";
-            this.lblPeso.Size = new System.Drawing.Size(46, 19);
+            this.lblPeso.Size = new System.Drawing.Size(39, 16);
             this.lblPeso.TabIndex = 88;
             this.lblPeso.Text = "Peso";
             // 
             // nupProteina
             // 
-            this.nupProteina.Location = new System.Drawing.Point(114, 316);
-            this.nupProteina.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.nupProteina.Location = new System.Drawing.Point(86, 257);
+            this.nupProteina.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.nupProteina.Name = "nupProteina";
-            this.nupProteina.Size = new System.Drawing.Size(84, 22);
+            this.nupProteina.Size = new System.Drawing.Size(63, 20);
             this.nupProteina.TabIndex = 87;
             // 
             // nudLipidos
             // 
-            this.nudLipidos.Location = new System.Drawing.Point(320, 316);
-            this.nudLipidos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.nudLipidos.Location = new System.Drawing.Point(240, 257);
+            this.nudLipidos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.nudLipidos.Name = "nudLipidos";
-            this.nudLipidos.Size = new System.Drawing.Size(84, 22);
+            this.nudLipidos.Size = new System.Drawing.Size(63, 20);
             this.nudLipidos.TabIndex = 86;
             // 
             // nudHidratosdeCarbono
             // 
-            this.nudHidratosdeCarbono.Location = new System.Drawing.Point(643, 313);
-            this.nudHidratosdeCarbono.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.nudHidratosdeCarbono.Location = new System.Drawing.Point(482, 254);
+            this.nudHidratosdeCarbono.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.nudHidratosdeCarbono.Name = "nudHidratosdeCarbono";
-            this.nudHidratosdeCarbono.Size = new System.Drawing.Size(84, 22);
+            this.nudHidratosdeCarbono.Size = new System.Drawing.Size(63, 20);
             this.nudHidratosdeCarbono.TabIndex = 85;
             // 
             // label5
@@ -200,9 +207,10 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.Gray;
-            this.label5.Location = new System.Drawing.Point(259, 405);
+            this.label5.Location = new System.Drawing.Point(194, 329);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(0, 16);
+            this.label5.Size = new System.Drawing.Size(0, 14);
             this.label5.TabIndex = 84;
             // 
             // label4
@@ -210,9 +218,10 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Gray;
-            this.label4.Location = new System.Drawing.Point(259, 382);
+            this.label4.Location = new System.Drawing.Point(194, 310);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(644, 16);
+            this.label4.Size = new System.Drawing.Size(492, 14);
             this.label4.TabIndex = 83;
             this.label4.Text = "Disclaimer: É necessário e obrigatório informar o cliente sobre a existência de a" +
     "lergénios no produto.";
@@ -221,11 +230,11 @@
             // 
             this.gbAlergenios.Controls.Add(this.rbAlergeniosNao);
             this.gbAlergenios.Controls.Add(this.rbAlergeniosSim);
-            this.gbAlergenios.Location = new System.Drawing.Point(26, 375);
-            this.gbAlergenios.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.gbAlergenios.Location = new System.Drawing.Point(20, 305);
+            this.gbAlergenios.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.gbAlergenios.Name = "gbAlergenios";
-            this.gbAlergenios.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.gbAlergenios.Size = new System.Drawing.Size(172, 65);
+            this.gbAlergenios.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gbAlergenios.Size = new System.Drawing.Size(129, 53);
             this.gbAlergenios.TabIndex = 82;
             this.gbAlergenios.TabStop = false;
             this.gbAlergenios.Text = "Alergénios";
@@ -233,10 +242,10 @@
             // rbAlergeniosNao
             // 
             this.rbAlergeniosNao.AutoSize = true;
-            this.rbAlergeniosNao.Location = new System.Drawing.Point(88, 30);
-            this.rbAlergeniosNao.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.rbAlergeniosNao.Location = new System.Drawing.Point(66, 24);
+            this.rbAlergeniosNao.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.rbAlergeniosNao.Name = "rbAlergeniosNao";
-            this.rbAlergeniosNao.Size = new System.Drawing.Size(54, 20);
+            this.rbAlergeniosNao.Size = new System.Drawing.Size(45, 17);
             this.rbAlergeniosNao.TabIndex = 1;
             this.rbAlergeniosNao.TabStop = true;
             this.rbAlergeniosNao.Text = "Não";
@@ -245,10 +254,10 @@
             // rbAlergeniosSim
             // 
             this.rbAlergeniosSim.AutoSize = true;
-            this.rbAlergeniosSim.Location = new System.Drawing.Point(5, 30);
-            this.rbAlergeniosSim.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.rbAlergeniosSim.Location = new System.Drawing.Point(4, 24);
+            this.rbAlergeniosSim.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.rbAlergeniosSim.Name = "rbAlergeniosSim";
-            this.rbAlergeniosSim.Size = new System.Drawing.Size(51, 20);
+            this.rbAlergeniosSim.Size = new System.Drawing.Size(42, 17);
             this.rbAlergeniosSim.TabIndex = 0;
             this.rbAlergeniosSim.TabStop = true;
             this.rbAlergeniosSim.Text = "Sim";
@@ -258,9 +267,10 @@
             // 
             this.lblHidratosdeCarbono.AutoSize = true;
             this.lblHidratosdeCarbono.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblHidratosdeCarbono.Location = new System.Drawing.Point(445, 316);
+            this.lblHidratosdeCarbono.Location = new System.Drawing.Point(334, 257);
+            this.lblHidratosdeCarbono.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblHidratosdeCarbono.Name = "lblHidratosdeCarbono";
-            this.lblHidratosdeCarbono.Size = new System.Drawing.Size(160, 19);
+            this.lblHidratosdeCarbono.Size = new System.Drawing.Size(138, 16);
             this.lblHidratosdeCarbono.TabIndex = 81;
             this.lblHidratosdeCarbono.Text = "Hidratos de Carbono";
             // 
@@ -268,9 +278,10 @@
             // 
             this.lblLipidos.AutoSize = true;
             this.lblLipidos.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLipidos.Location = new System.Drawing.Point(233, 316);
+            this.lblLipidos.Location = new System.Drawing.Point(175, 257);
+            this.lblLipidos.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblLipidos.Name = "lblLipidos";
-            this.lblLipidos.Size = new System.Drawing.Size(62, 19);
+            this.lblLipidos.Size = new System.Drawing.Size(53, 16);
             this.lblLipidos.TabIndex = 80;
             this.lblLipidos.Text = "Lípidos";
             // 
@@ -278,9 +289,10 @@
             // 
             this.lblProteina.AutoSize = true;
             this.lblProteina.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblProteina.Location = new System.Drawing.Point(22, 316);
+            this.lblProteina.Location = new System.Drawing.Point(16, 257);
+            this.lblProteina.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblProteina.Name = "lblProteina";
-            this.lblProteina.Size = new System.Drawing.Size(71, 19);
+            this.lblProteina.Size = new System.Drawing.Size(61, 16);
             this.lblProteina.TabIndex = 79;
             this.lblProteina.Text = "Proteína";
             // 
@@ -289,9 +301,10 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Gray;
-            this.label2.Location = new System.Drawing.Point(21, 268);
+            this.label2.Location = new System.Drawing.Point(16, 218);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(377, 16);
+            this.label2.Size = new System.Drawing.Size(290, 14);
             this.label2.TabIndex = 78;
             this.label2.Text = " Informar sempre o cliente quando requisitados os valores.";
             // 
@@ -300,9 +313,10 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Gray;
-            this.label1.Location = new System.Drawing.Point(24, 245);
+            this.label1.Location = new System.Drawing.Point(18, 199);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(617, 16);
+            this.label1.Size = new System.Drawing.Size(474, 14);
             this.label1.TabIndex = 77;
             this.label1.Text = "Disclaimer: Todos os valores apresentados estão representados em valores médios e" +
     " não totais.";
@@ -311,17 +325,18 @@
             // 
             this.lblInformacaoNutricional.AutoSize = true;
             this.lblInformacaoNutricional.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblInformacaoNutricional.Location = new System.Drawing.Point(22, 210);
+            this.lblInformacaoNutricional.Location = new System.Drawing.Point(16, 171);
+            this.lblInformacaoNutricional.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblInformacaoNutricional.Name = "lblInformacaoNutricional";
-            this.lblInformacaoNutricional.Size = new System.Drawing.Size(224, 24);
+            this.lblInformacaoNutricional.Size = new System.Drawing.Size(182, 19);
             this.lblInformacaoNutricional.TabIndex = 76;
             this.lblInformacaoNutricional.Text = "Informação Nutricional";
             // 
             // InfoNutricional
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(932, 463);
+            this.ClientSize = new System.Drawing.Size(699, 376);
             this.Controls.Add(this.btnAnterior);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txtCusto);
@@ -346,6 +361,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lblInformacaoNutricional);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "InfoNutricional";
             this.Text = "Informação Nutricional";
             ((System.ComponentModel.ISupportInitialize)(this.nupProteina)).EndInit();

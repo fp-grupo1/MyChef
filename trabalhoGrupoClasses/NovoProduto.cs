@@ -14,12 +14,14 @@ namespace trabalhoGrupoClasses
     {
 
         private Form m_formPai;
-        ProdutoAlimentar produtoAlimentar;
 
-        public NovoProduto(Form formPai)
+        private BindingList<ProdutoAlimentar> listaDeProdutos;
+
+        public NovoProduto(Form formPai, BindingList<ProdutoAlimentar> lista)
         {
             InitializeComponent();
             m_formPai = formPai;
+            listaDeProdutos = lista;
         }
 
         private void NovoProduto_Load(object sender, EventArgs e)
@@ -32,6 +34,7 @@ namespace trabalhoGrupoClasses
             m_formPai.Location = this.Location;
             this.Hide();
             m_formPai.Show();
+            
         }
 
         private void btnRegistarTipo_Click(object sender, EventArgs e)

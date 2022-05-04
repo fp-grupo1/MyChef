@@ -56,6 +56,10 @@ namespace trabalhoGrupoClasses
             else return false;
         }
 
+        public override string TipoToString()
+        {
+            return "Produto Processado";
+        }
         public ProdutoProcessado(string codigo, string nome, double peso, string marca) : base(codigo, nome, peso, 10)
         {
             p_unidadesEmbalagem = 1;

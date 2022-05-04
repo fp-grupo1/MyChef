@@ -13,12 +13,16 @@ namespace trabalhoGrupoClasses
     public partial class Distribuidores : Form
     {
         private Form m_formPai;
-        ProdutoNatural produtotestedist = new ProdutoNatural("natural23", "produtoteste", 500);
 
-        public Distribuidores(Form formPai)
+        private ProdutoAlimentar umProduto;
+
+
+        public Distribuidores(Form formPai, ProdutoAlimentar produto)
         {
             InitializeComponent();
             m_formPai = formPai;
+            umProduto = produto;
+
         }
 
         private void Distribuidores_Load(object sender, EventArgs e)
