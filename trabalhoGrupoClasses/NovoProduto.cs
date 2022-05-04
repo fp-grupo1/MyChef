@@ -100,7 +100,6 @@ namespace trabalhoGrupoClasses
             }
             btnRegistoProduto.Enabled = false;
             btnRegistarTipo.Enabled = true;
-            ApagarInformaçãoAnteriorProduto();
             MessageBox.Show("Introdução de Produto Alimentar completo!");
         }
 
