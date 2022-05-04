@@ -13,14 +13,17 @@ namespace trabalhoGrupoClasses
     public partial class EditarProduto : Form
     {
         private Form m_formPai;
-        public EditarProduto(Form formPai)
+        private ProdutoAlimentar produtoAEditar;
+        public EditarProduto(Form formPai, ProdutoAlimentar produto)
         {
             InitializeComponent();
             m_formPai = formPai;
+            produtoAEditar = produto;
         }
 
         private void EditarProduto_Load(object sender, EventArgs e)
         {
+            txtCodigoID.Text = produtoAEditar.IdCod;
 
         }
 

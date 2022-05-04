@@ -11,7 +11,7 @@ namespace trabalhoGrupoClasses
         private string p_modoPreparacao;
         private int p_tempoPreparacao;
         private bool p_gourmet;
-        private bool p_gourmet;
+        
 
 
         public string ModoPreparacao
@@ -57,7 +57,10 @@ namespace trabalhoGrupoClasses
             else resultado = false;
             return resultado;
         }
-
+        public override string TipoToString()
+        {
+            return "Refeição Pronta";
+        }
         public RefeicaoPronta(string codigo, string nome, double peso, string marca) : base(codigo, nome, peso, marca)
         {
             p_modoPreparacao = "sem informação adicional";

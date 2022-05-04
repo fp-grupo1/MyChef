@@ -29,6 +29,11 @@ namespace trabalhoGrupoClasses
             return true;
         }
 
+        public override string TipoToString() 
+        {
+            return "Produto Natural"; 
+        }
+
         public ProdutoNatural(string codigo, string nome, double peso) : base(codigo, nome, peso, 5)
         {
             p_origem = "Portugal";
