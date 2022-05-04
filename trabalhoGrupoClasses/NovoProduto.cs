@@ -135,7 +135,7 @@ namespace trabalhoGrupoClasses
             chAlergénios.Checked = false;
             numHidratos.Value = 0;
             numLipidos.Value = 0;
-            numProteinas.Value = 0;
+            numProteinas.Value = 03;
 
             if (produtoAlimentar is ProdutoNatural)
             {
