@@ -128,6 +128,7 @@ namespace trabalhoGrupoClasses
         // É implementado nas classes filhas, devolve se um produto é saudável
         public abstract bool ESaudavel();
 
+        public abstract string TipoToString();
         // Devolve o sucesso ou não do registo de um novo distribuidor,
         // incrementando o número de distribuidores se não ultrapassar o número máximo de distribuidores
         public bool RegistarDistribuidor()
