@@ -98,9 +98,10 @@ namespace trabalhoGrupoClasses
                 produtoProcessado.UnidadesEmbalagem = Convert.ToInt32(numUnidades.Value);
                 produtoProcessado.Validade = Convert.ToInt32(numValidade.Value);
             }
+            btnCalcular.Enabled = true;
+            btnCriarNovo.Enabled = true;
             btnRegistoProduto.Enabled = false;
-            btnRegistarTipo.Enabled = true;
-            MessageBox.Show("Introdução de Produto Alimentar completo!");
+            MessageBox.Show("Introdução de Produto Alimentar completo! Pode também calcular a margem de comercialização e o PVP do seu produto.");
         }
 
         private void btnCalcular_Click(object sender, EventArgs e)
@@ -127,12 +128,16 @@ namespace trabalhoGrupoClasses
         }
         private void btnCriarNovo_Click(object sender, EventArgs e)
         {
-
+            ApagarInformaçãoAnteriorProduto();
+            btnRegistoProduto.Enabled = false;
+            btnRegistarTipo.Enabled = true;
+            btnCriarNovo.Enabled = false;
+            MessageBox.Show("Pode criar um novo produto.");
         }
 
         private void ApagarInformaçãoAnteriorProduto()
         {
-            txtCodigoID.Text = "teste";
+            txtCodigoID.Text = "";
             txtNomeProduto.Text = "";
             txtPeso.Text = "";
             txtCusto.Text = "";
@@ -141,6 +146,8 @@ namespace trabalhoGrupoClasses
             numHidratos.Value = 0;
             numLipidos.Value = 0;
             numProteinas.Value = 0;
+            txtMargem.Text = "";
+            txtPVP.Text = "";
 
             if (produtoAlimentar is ProdutoNatural)
             {

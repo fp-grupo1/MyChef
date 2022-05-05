@@ -617,6 +617,7 @@
             // 
             // btnCalcular
             // 
+            this.btnCalcular.Enabled = false;
             this.btnCalcular.Location = new System.Drawing.Point(9, 134);
             this.btnCalcular.Margin = new System.Windows.Forms.Padding(2);
             this.btnCalcular.Name = "btnCalcular";
