@@ -30,32 +30,32 @@
         {
             this.btnAnterior = new System.Windows.Forms.Button();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.cbSaudavel = new System.Windows.Forms.CheckBox();
             this.lblCodigoID = new System.Windows.Forms.Label();
             this.lblPeso = new System.Windows.Forms.Label();
             this.lblNomeProduto = new System.Windows.Forms.Label();
             this.txtCodigoID = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.txtNomeProduto = new System.Windows.Forms.TextBox();
-            this.cbAlergénios = new System.Windows.Forms.CheckBox();
+            this.chAlergénios = new System.Windows.Forms.CheckBox();
             this.txtPeso = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.cmbTipo = new System.Windows.Forms.ComboBox();
+            this.cbTipo = new System.Windows.Forms.ComboBox();
             this.lblCusto = new System.Windows.Forms.Label();
-            this.gbRefeicaoPronta = new System.Windows.Forms.GroupBox();
+            this.txtCusto = new System.Windows.Forms.TextBox();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.cbGourmet = new System.Windows.Forms.CheckBox();
             this.label11 = new System.Windows.Forms.Label();
             this.txtModoPrep = new System.Windows.Forms.TextBox();
             this.numTempoPrep = new System.Windows.Forms.NumericUpDown();
             this.label12 = new System.Windows.Forms.Label();
-            this.gbProdutoProcessado = new System.Windows.Forms.GroupBox();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.numUnidades = new System.Windows.Forms.NumericUpDown();
             this.label10 = new System.Windows.Forms.Label();
             this.txtMarca = new System.Windows.Forms.TextBox();
             this.numValidade = new System.Windows.Forms.NumericUpDown();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.gbProdutoNatural = new System.Windows.Forms.GroupBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.cbBiologico = new System.Windows.Forms.CheckBox();
             this.label7 = new System.Windows.Forms.Label();
             this.txtPais = new System.Windows.Forms.TextBox();
@@ -66,31 +66,21 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.btnDistribuidores = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnGuardarAlteracoes = new System.Windows.Forms.Button();
+            this.btnEditarProduto = new System.Windows.Forms.Button();
             this.btnApagarProduto = new System.Windows.Forms.Button();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.txtMargem = new System.Windows.Forms.TextBox();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.txtPVP = new System.Windows.Forms.TextBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.btnCalcular = new System.Windows.Forms.Button();
-            this.numCusto = new System.Windows.Forms.NumericUpDown();
             this.groupBox5.SuspendLayout();
-            this.gbRefeicaoPronta.SuspendLayout();
+            this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numTempoPrep)).BeginInit();
-            this.gbProdutoProcessado.SuspendLayout();
+            this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numUnidades)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numValidade)).BeginInit();
-            this.gbProdutoNatural.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numProteinas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numLipidos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numHidratos)).BeginInit();
-            this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numCusto)).BeginInit();
             this.SuspendLayout();
             // 
             // btnAnterior
@@ -106,42 +96,29 @@
             // 
             // groupBox5
             // 
-            this.groupBox5.Controls.Add(this.numCusto);
-            this.groupBox5.Controls.Add(this.groupBox2);
-            this.groupBox5.Controls.Add(this.cbSaudavel);
             this.groupBox5.Controls.Add(this.lblCodigoID);
             this.groupBox5.Controls.Add(this.lblPeso);
             this.groupBox5.Controls.Add(this.lblNomeProduto);
             this.groupBox5.Controls.Add(this.txtCodigoID);
             this.groupBox5.Controls.Add(this.label6);
             this.groupBox5.Controls.Add(this.txtNomeProduto);
-            this.groupBox5.Controls.Add(this.cbAlergénios);
+            this.groupBox5.Controls.Add(this.chAlergénios);
             this.groupBox5.Controls.Add(this.txtPeso);
             this.groupBox5.Controls.Add(this.label3);
-            this.groupBox5.Controls.Add(this.cmbTipo);
+            this.groupBox5.Controls.Add(this.cbTipo);
             this.groupBox5.Controls.Add(this.lblCusto);
+            this.groupBox5.Controls.Add(this.txtCusto);
             this.groupBox5.Location = new System.Drawing.Point(15, 56);
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.Size = new System.Drawing.Size(520, 241);
             this.groupBox5.TabIndex = 130;
             this.groupBox5.TabStop = false;
             // 
-            // cbSaudavel
-            // 
-            this.cbSaudavel.AutoSize = true;
-            this.cbSaudavel.Enabled = false;
-            this.cbSaudavel.Location = new System.Drawing.Point(214, 178);
-            this.cbSaudavel.Name = "cbSaudavel";
-            this.cbSaudavel.Size = new System.Drawing.Size(87, 20);
-            this.cbSaudavel.TabIndex = 118;
-            this.cbSaudavel.Text = "Saudável";
-            this.cbSaudavel.UseVisualStyleBackColor = true;
-            // 
             // lblCodigoID
             // 
             this.lblCodigoID.AutoSize = true;
             this.lblCodigoID.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCodigoID.Location = new System.Drawing.Point(18, 24);
+            this.lblCodigoID.Location = new System.Drawing.Point(18, 47);
             this.lblCodigoID.Name = "lblCodigoID";
             this.lblCodigoID.Size = new System.Drawing.Size(83, 19);
             this.lblCodigoID.TabIndex = 93;
@@ -151,7 +128,7 @@
             // 
             this.lblPeso.AutoSize = true;
             this.lblPeso.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPeso.Location = new System.Drawing.Point(18, 89);
+            this.lblPeso.Location = new System.Drawing.Point(18, 112);
             this.lblPeso.Name = "lblPeso";
             this.lblPeso.Size = new System.Drawing.Size(46, 19);
             this.lblPeso.TabIndex = 91;
@@ -161,7 +138,7 @@
             // 
             this.lblNomeProduto.AutoSize = true;
             this.lblNomeProduto.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNomeProduto.Location = new System.Drawing.Point(164, 24);
+            this.lblNomeProduto.Location = new System.Drawing.Point(164, 47);
             this.lblNomeProduto.Name = "lblNomeProduto";
             this.lblNomeProduto.Size = new System.Drawing.Size(113, 19);
             this.lblNomeProduto.TabIndex = 92;
@@ -169,7 +146,7 @@
             // 
             // txtCodigoID
             // 
-            this.txtCodigoID.Location = new System.Drawing.Point(22, 48);
+            this.txtCodigoID.Location = new System.Drawing.Point(22, 71);
             this.txtCodigoID.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtCodigoID.Name = "txtCodigoID";
             this.txtCodigoID.ReadOnly = true;
@@ -180,7 +157,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Arial", 10F);
-            this.label6.Location = new System.Drawing.Point(18, 177);
+            this.label6.Location = new System.Drawing.Point(18, 175);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(124, 19);
             this.label6.TabIndex = 117;
@@ -188,25 +165,25 @@
             // 
             // txtNomeProduto
             // 
-            this.txtNomeProduto.Location = new System.Drawing.Point(168, 48);
+            this.txtNomeProduto.Location = new System.Drawing.Point(168, 71);
             this.txtNomeProduto.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtNomeProduto.Name = "txtNomeProduto";
             this.txtNomeProduto.Size = new System.Drawing.Size(328, 22);
             this.txtNomeProduto.TabIndex = 95;
             // 
-            // cbAlergénios
+            // chAlergénios
             // 
-            this.cbAlergénios.AutoSize = true;
-            this.cbAlergénios.Location = new System.Drawing.Point(158, 147);
-            this.cbAlergénios.Name = "cbAlergénios";
-            this.cbAlergénios.Size = new System.Drawing.Size(143, 20);
-            this.cbAlergénios.TabIndex = 116;
-            this.cbAlergénios.Text = "Contém Alergénios";
-            this.cbAlergénios.UseVisualStyleBackColor = true;
+            this.chAlergénios.AutoSize = true;
+            this.chAlergénios.Location = new System.Drawing.Point(353, 138);
+            this.chAlergénios.Name = "chAlergénios";
+            this.chAlergénios.Size = new System.Drawing.Size(143, 20);
+            this.chAlergénios.TabIndex = 116;
+            this.chAlergénios.Text = "Contém Alergénios";
+            this.chAlergénios.UseVisualStyleBackColor = true;
             // 
             // txtPeso
             // 
-            this.txtPeso.Location = new System.Drawing.Point(22, 113);
+            this.txtPeso.Location = new System.Drawing.Point(22, 136);
             this.txtPeso.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtPeso.Name = "txtPeso";
             this.txtPeso.Size = new System.Drawing.Size(115, 22);
@@ -215,51 +192,59 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(288, 114);
+            this.label3.Location = new System.Drawing.Point(288, 137);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(14, 16);
             this.label3.TabIndex = 98;
             this.label3.Text = "€";
             // 
-            // cmbTipo
+            // cbTipo
             // 
             this.cmbTipo.FormattingEnabled = true;
             this.cmbTipo.Items.AddRange(new object[] {
             "Produto Natural",
             "Produto Processado",
             "Refeição Pronta"});
-            this.cmbTipo.Location = new System.Drawing.Point(22, 200);
-            this.cmbTipo.Name = "cmbTipo";
-            this.cmbTipo.Size = new System.Drawing.Size(168, 24);
-            this.cmbTipo.TabIndex = 106;
+            this.cbTipo.Location = new System.Drawing.Point(22, 198);
+            this.cbTipo.Name = "cbTipo";
+            this.cbTipo.Size = new System.Drawing.Size(121, 24);
+            this.cbTipo.TabIndex = 106;
             // 
             // lblCusto
             // 
             this.lblCusto.AutoSize = true;
             this.lblCusto.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCusto.Location = new System.Drawing.Point(164, 89);
+            this.lblCusto.Location = new System.Drawing.Point(164, 112);
             this.lblCusto.Name = "lblCusto";
             this.lblCusto.Size = new System.Drawing.Size(51, 19);
             this.lblCusto.TabIndex = 99;
             this.lblCusto.Text = "Custo";
             // 
-            // gbRefeicaoPronta
+            // txtCusto
             // 
-            this.gbRefeicaoPronta.Controls.Add(this.cbGourmet);
-            this.gbRefeicaoPronta.Controls.Add(this.label11);
-            this.gbRefeicaoPronta.Controls.Add(this.txtModoPrep);
-            this.gbRefeicaoPronta.Controls.Add(this.numTempoPrep);
-            this.gbRefeicaoPronta.Controls.Add(this.label12);
-            this.gbRefeicaoPronta.Location = new System.Drawing.Point(15, 464);
-            this.gbRefeicaoPronta.Name = "gbRefeicaoPronta";
-            this.gbRefeicaoPronta.Size = new System.Drawing.Size(520, 155);
-            this.gbRefeicaoPronta.TabIndex = 129;
-            this.gbRefeicaoPronta.TabStop = false;
+            this.txtCusto.Location = new System.Drawing.Point(168, 136);
+            this.txtCusto.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtCusto.Name = "txtCusto";
+            this.txtCusto.Size = new System.Drawing.Size(115, 22);
+            this.txtCusto.TabIndex = 100;
+            // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.cbGourmet);
+            this.groupBox4.Controls.Add(this.label11);
+            this.groupBox4.Controls.Add(this.txtModoPrep);
+            this.groupBox4.Controls.Add(this.numTempoPrep);
+            this.groupBox4.Controls.Add(this.label12);
+            this.groupBox4.Location = new System.Drawing.Point(15, 312);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(520, 155);
+            this.groupBox4.TabIndex = 129;
+            this.groupBox4.TabStop = false;
             // 
             // cbGourmet
             // 
             this.cbGourmet.AutoSize = true;
-            this.cbGourmet.Location = new System.Drawing.Point(240, 88);
+            this.cbGourmet.Location = new System.Drawing.Point(22, 102);
             this.cbGourmet.Name = "cbGourmet";
             this.cbGourmet.Size = new System.Drawing.Size(80, 20);
             this.cbGourmet.TabIndex = 122;
@@ -280,19 +265,13 @@
             // 
             this.txtModoPrep.Location = new System.Drawing.Point(22, 48);
             this.txtModoPrep.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtModoPrep.Multiline = true;
             this.txtModoPrep.Name = "txtModoPrep";
-            this.txtModoPrep.Size = new System.Drawing.Size(159, 92);
+            this.txtModoPrep.Size = new System.Drawing.Size(115, 22);
             this.txtModoPrep.TabIndex = 121;
             // 
             // numTempoPrep
             // 
-            this.numTempoPrep.Location = new System.Drawing.Point(240, 50);
-            this.numTempoPrep.Maximum = new decimal(new int[] {
-            10000,
-            0,
-            0,
-            0});
+            this.numTempoPrep.Location = new System.Drawing.Point(259, 50);
             this.numTempoPrep.Name = "numTempoPrep";
             this.numTempoPrep.Size = new System.Drawing.Size(120, 22);
             this.numTempoPrep.TabIndex = 119;
@@ -301,25 +280,25 @@
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(236, 22);
+            this.label12.Location = new System.Drawing.Point(255, 22);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(243, 19);
             this.label12.TabIndex = 118;
             this.label12.Text = "Tempo de Preparação (minutos)";
             // 
-            // gbProdutoProcessado
+            // groupBox3
             // 
-            this.gbProdutoProcessado.Controls.Add(this.numUnidades);
-            this.gbProdutoProcessado.Controls.Add(this.label10);
-            this.gbProdutoProcessado.Controls.Add(this.txtMarca);
-            this.gbProdutoProcessado.Controls.Add(this.numValidade);
-            this.gbProdutoProcessado.Controls.Add(this.label9);
-            this.gbProdutoProcessado.Controls.Add(this.label8);
-            this.gbProdutoProcessado.Location = new System.Drawing.Point(15, 303);
-            this.gbProdutoProcessado.Name = "gbProdutoProcessado";
-            this.gbProdutoProcessado.Size = new System.Drawing.Size(520, 155);
-            this.gbProdutoProcessado.TabIndex = 128;
-            this.gbProdutoProcessado.TabStop = false;
+            this.groupBox3.Controls.Add(this.numUnidades);
+            this.groupBox3.Controls.Add(this.label10);
+            this.groupBox3.Controls.Add(this.txtMarca);
+            this.groupBox3.Controls.Add(this.numValidade);
+            this.groupBox3.Controls.Add(this.label9);
+            this.groupBox3.Controls.Add(this.label8);
+            this.groupBox3.Location = new System.Drawing.Point(15, 473);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(520, 155);
+            this.groupBox3.TabIndex = 128;
+            this.groupBox3.TabStop = false;
             // 
             // numUnidades
             // 
@@ -373,16 +352,16 @@
             this.label8.TabIndex = 107;
             this.label8.Text = "Unid./Embalagem";
             // 
-            // gbProdutoNatural
+            // groupBox2
             // 
-            this.gbProdutoNatural.Controls.Add(this.cbBiologico);
-            this.gbProdutoNatural.Controls.Add(this.label7);
-            this.gbProdutoNatural.Controls.Add(this.txtPais);
-            this.gbProdutoNatural.Location = new System.Drawing.Point(15, 304);
-            this.gbProdutoNatural.Name = "gbProdutoNatural";
-            this.gbProdutoNatural.Size = new System.Drawing.Size(520, 155);
-            this.gbProdutoNatural.TabIndex = 127;
-            this.gbProdutoNatural.TabStop = false;
+            this.groupBox2.Controls.Add(this.cbBiologico);
+            this.groupBox2.Controls.Add(this.label7);
+            this.groupBox2.Controls.Add(this.txtPais);
+            this.groupBox2.Location = new System.Drawing.Point(15, 634);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(520, 155);
+            this.groupBox2.TabIndex = 127;
+            this.groupBox2.TabStop = false;
             // 
             // cbBiologico
             // 
@@ -423,7 +402,7 @@
             this.groupBox1.Font = new System.Drawing.Font("Arial", 10F);
             this.groupBox1.Location = new System.Drawing.Point(552, 56);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(226, 241);
+            this.groupBox1.Size = new System.Drawing.Size(170, 241);
             this.groupBox1.TabIndex = 126;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Valores Nutricionais (100g)";
@@ -482,6 +461,16 @@
             this.label5.TabIndex = 111;
             this.label5.Text = "Proteínas";
             // 
+            // btnDistribuidores
+            // 
+            this.btnDistribuidores.Location = new System.Drawing.Point(552, 435);
+            this.btnDistribuidores.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnDistribuidores.Name = "btnDistribuidores";
+            this.btnDistribuidores.Size = new System.Drawing.Size(169, 32);
+            this.btnDistribuidores.TabIndex = 125;
+            this.btnDistribuidores.Text = "Informação Distribuidores";
+            this.btnDistribuidores.UseVisualStyleBackColor = true;
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -492,159 +481,61 @@
             this.label1.TabIndex = 124;
             this.label1.Text = "Editar Produto";
             // 
-            // btnGuardarAlteracoes
+            // btnEditarProduto
             // 
-            this.btnGuardarAlteracoes.Location = new System.Drawing.Point(566, 410);
-            this.btnGuardarAlteracoes.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnGuardarAlteracoes.Name = "btnGuardarAlteracoes";
-            this.btnGuardarAlteracoes.Size = new System.Drawing.Size(200, 32);
-            this.btnGuardarAlteracoes.TabIndex = 123;
-            this.btnGuardarAlteracoes.Text = "Guardar Alterações";
-            this.btnGuardarAlteracoes.UseVisualStyleBackColor = true;
-            this.btnGuardarAlteracoes.Click += new System.EventHandler(this.btnGuardarAlteracoes_Click);
+            this.btnEditarProduto.Location = new System.Drawing.Point(552, 321);
+            this.btnEditarProduto.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnEditarProduto.Name = "btnEditarProduto";
+            this.btnEditarProduto.Size = new System.Drawing.Size(170, 32);
+            this.btnEditarProduto.TabIndex = 123;
+            this.btnEditarProduto.Text = "Guardar Alterações";
+            this.btnEditarProduto.UseVisualStyleBackColor = true;
             // 
             // btnApagarProduto
             // 
             this.btnApagarProduto.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnApagarProduto.Location = new System.Drawing.Point(566, 359);
+            this.btnApagarProduto.Location = new System.Drawing.Point(553, 362);
             this.btnApagarProduto.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnApagarProduto.Name = "btnApagarProduto";
-            this.btnApagarProduto.Size = new System.Drawing.Size(200, 32);
+            this.btnApagarProduto.Size = new System.Drawing.Size(169, 32);
             this.btnApagarProduto.TabIndex = 132;
             this.btnApagarProduto.Text = "Apagar Produto";
             this.btnApagarProduto.UseVisualStyleBackColor = true;
-            this.btnApagarProduto.Click += new System.EventHandler(this.btnApagarProduto_Click);
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(149, 39);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(14, 16);
-            this.label13.TabIndex = 119;
-            this.label13.Text = "€";
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(25, 14);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(68, 19);
-            this.label14.TabIndex = 120;
-            this.label14.Text = "Margem";
-            // 
-            // txtMargem
-            // 
-            this.txtMargem.Location = new System.Drawing.Point(28, 39);
-            this.txtMargem.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtMargem.Name = "txtMargem";
-            this.txtMargem.ReadOnly = true;
-            this.txtMargem.Size = new System.Drawing.Size(115, 22);
-            this.txtMargem.TabIndex = 121;
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(149, 90);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(14, 16);
-            this.label15.TabIndex = 122;
-            this.label15.Text = "€";
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(25, 65);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(42, 19);
-            this.label16.TabIndex = 123;
-            this.label16.Text = "PVP";
-            // 
-            // txtPVP
-            // 
-            this.txtPVP.Location = new System.Drawing.Point(29, 89);
-            this.txtPVP.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtPVP.Name = "txtPVP";
-            this.txtPVP.ReadOnly = true;
-            this.txtPVP.Size = new System.Drawing.Size(115, 22);
-            this.txtPVP.TabIndex = 124;
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.btnCalcular);
-            this.groupBox2.Controls.Add(this.txtMargem);
-            this.groupBox2.Controls.Add(this.label15);
-            this.groupBox2.Controls.Add(this.label14);
-            this.groupBox2.Controls.Add(this.label16);
-            this.groupBox2.Controls.Add(this.label13);
-            this.groupBox2.Controls.Add(this.txtPVP);
-            this.groupBox2.Location = new System.Drawing.Point(307, 81);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(189, 153);
-            this.groupBox2.TabIndex = 133;
-            this.groupBox2.TabStop = false;
-            // 
-            // btnCalcular
-            // 
-            this.btnCalcular.Location = new System.Drawing.Point(28, 119);
-            this.btnCalcular.Name = "btnCalcular";
-            this.btnCalcular.Size = new System.Drawing.Size(134, 23);
-            this.btnCalcular.TabIndex = 125;
-            this.btnCalcular.Text = "Calcular";
-            this.btnCalcular.UseVisualStyleBackColor = true;
-            this.btnCalcular.Click += new System.EventHandler(this.btnCalcular_Click);
-            // 
-            // numCusto
-            // 
-            this.numCusto.DecimalPlaces = 2;
-            this.numCusto.Location = new System.Drawing.Point(168, 114);
-            this.numCusto.Maximum = new decimal(new int[] {
-            10000,
-            0,
-            0,
-            0});
-            this.numCusto.Name = "numCusto";
-            this.numCusto.Size = new System.Drawing.Size(114, 22);
-            this.numCusto.TabIndex = 123;
             // 
             // EditarProduto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(826, 798);
-            this.Controls.Add(this.gbProdutoNatural);
+            this.ClientSize = new System.Drawing.Size(738, 798);
             this.Controls.Add(this.btnApagarProduto);
             this.Controls.Add(this.btnAnterior);
             this.Controls.Add(this.groupBox5);
-            this.Controls.Add(this.gbRefeicaoPronta);
-            this.Controls.Add(this.gbProdutoProcessado);
+            this.Controls.Add(this.groupBox4);
+            this.Controls.Add(this.groupBox3);
+            this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.btnDistribuidores);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.btnGuardarAlteracoes);
+            this.Controls.Add(this.btnEditarProduto);
             this.Name = "EditarProduto";
             this.Text = "EditarProduto";
             this.Load += new System.EventHandler(this.EditarProduto_Load);
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
-            this.gbRefeicaoPronta.ResumeLayout(false);
-            this.gbRefeicaoPronta.PerformLayout();
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numTempoPrep)).EndInit();
-            this.gbProdutoProcessado.ResumeLayout(false);
-            this.gbProdutoProcessado.PerformLayout();
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numUnidades)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numValidade)).EndInit();
-            this.gbProdutoNatural.ResumeLayout(false);
-            this.gbProdutoNatural.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numProteinas)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numLipidos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numHidratos)).EndInit();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numCusto)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -660,25 +551,26 @@
         private System.Windows.Forms.TextBox txtCodigoID;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtNomeProduto;
-        private System.Windows.Forms.CheckBox cbAlergénios;
+        private System.Windows.Forms.CheckBox chAlergénios;
         private System.Windows.Forms.TextBox txtPeso;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ComboBox cmbTipo;
+        private System.Windows.Forms.ComboBox cbTipo;
         private System.Windows.Forms.Label lblCusto;
-        private System.Windows.Forms.GroupBox gbRefeicaoPronta;
+        private System.Windows.Forms.TextBox txtCusto;
+        private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.CheckBox cbGourmet;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox txtModoPrep;
         private System.Windows.Forms.NumericUpDown numTempoPrep;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.GroupBox gbProdutoProcessado;
+        private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.NumericUpDown numUnidades;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox txtMarca;
         private System.Windows.Forms.NumericUpDown numValidade;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.GroupBox gbProdutoNatural;
+        private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.CheckBox cbBiologico;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtPais;
@@ -689,18 +581,9 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Button btnDistribuidores;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btnGuardarAlteracoes;
+        private System.Windows.Forms.Button btnEditarProduto;
         private System.Windows.Forms.Button btnApagarProduto;
-        private System.Windows.Forms.CheckBox cbSaudavel;
-        private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.TextBox txtMargem;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.TextBox txtPVP;
-        private System.Windows.Forms.Button btnCalcular;
-        private System.Windows.Forms.NumericUpDown numCusto;
     }
 }
