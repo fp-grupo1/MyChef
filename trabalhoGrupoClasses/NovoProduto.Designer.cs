@@ -50,18 +50,18 @@
             this.label5 = new System.Windows.Forms.Label();
             this.chAlergénios = new System.Windows.Forms.CheckBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.gbProdutoNatural = new System.Windows.Forms.GroupBox();
             this.cbBiologico = new System.Windows.Forms.CheckBox();
             this.label7 = new System.Windows.Forms.Label();
             this.txtPais = new System.Windows.Forms.TextBox();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.gbProdutoProcessado = new System.Windows.Forms.GroupBox();
             this.numUnidades = new System.Windows.Forms.NumericUpDown();
             this.label10 = new System.Windows.Forms.Label();
             this.txtMarca = new System.Windows.Forms.TextBox();
             this.numValidade = new System.Windows.Forms.NumericUpDown();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.gbRefeicaoPronta = new System.Windows.Forms.GroupBox();
             this.cbGourmet = new System.Windows.Forms.CheckBox();
             this.label11 = new System.Windows.Forms.Label();
             this.txtModoPrep = new System.Windows.Forms.TextBox();
@@ -83,11 +83,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.numProteinas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numLipidos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numHidratos)).BeginInit();
-            this.groupBox2.SuspendLayout();
-            this.groupBox3.SuspendLayout();
+            this.gbProdutoNatural.SuspendLayout();
+            this.gbProdutoProcessado.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numUnidades)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numValidade)).BeginInit();
-            this.groupBox4.SuspendLayout();
+            this.gbRefeicaoPronta.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numTempoPrep)).BeginInit();
             this.groupBox5.SuspendLayout();
             this.groupBox6.SuspendLayout();
@@ -224,6 +224,7 @@
             this.cbTipo.Name = "cbTipo";
             this.cbTipo.Size = new System.Drawing.Size(92, 21);
             this.cbTipo.TabIndex = 106;
+            this.cbTipo.SelectedIndexChanged += new System.EventHandler(this.cbTipo_SelectedIndexChanged);
             // 
             // groupBox1
             // 
@@ -325,23 +326,22 @@
             this.label6.TabIndex = 117;
             this.label6.Text = "Tipo de Produto";
             // 
-            // groupBox2
+            // gbProdutoNatural
             // 
-            this.groupBox2.Controls.Add(this.cbBiologico);
-            this.groupBox2.Controls.Add(this.label7);
-            this.groupBox2.Controls.Add(this.txtPais);
-            this.groupBox2.Location = new System.Drawing.Point(11, 515);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox2.Size = new System.Drawing.Size(411, 126);
-            this.groupBox2.TabIndex = 118;
-            this.groupBox2.TabStop = false;
+            this.gbProdutoNatural.Controls.Add(this.cbBiologico);
+            this.gbProdutoNatural.Controls.Add(this.label7);
+            this.gbProdutoNatural.Controls.Add(this.txtPais);
+            this.gbProdutoNatural.Location = new System.Drawing.Point(11, 515);
+            this.gbProdutoNatural.Margin = new System.Windows.Forms.Padding(2);
+            this.gbProdutoNatural.Name = "gbProdutoNatural";
+            this.gbProdutoNatural.Padding = new System.Windows.Forms.Padding(2);
+            this.gbProdutoNatural.Size = new System.Drawing.Size(411, 126);
+            this.gbProdutoNatural.TabIndex = 118;
+            this.gbProdutoNatural.TabStop = false;
             // 
             // cbBiologico
             // 
             this.cbBiologico.AutoSize = true;
-            this.cbBiologico.Enabled = false;
             this.cbBiologico.Location = new System.Drawing.Point(194, 36);
             this.cbBiologico.Margin = new System.Windows.Forms.Padding(2);
             this.cbBiologico.Name = "cbBiologico";
@@ -363,32 +363,30 @@
             // 
             // txtPais
             // 
-            this.txtPais.Enabled = false;
             this.txtPais.Location = new System.Drawing.Point(14, 43);
             this.txtPais.Margin = new System.Windows.Forms.Padding(2);
             this.txtPais.Name = "txtPais";
             this.txtPais.Size = new System.Drawing.Size(87, 20);
             this.txtPais.TabIndex = 108;
             // 
-            // groupBox3
+            // gbProdutoProcessado
             // 
-            this.groupBox3.Controls.Add(this.numUnidades);
-            this.groupBox3.Controls.Add(this.label10);
-            this.groupBox3.Controls.Add(this.txtMarca);
-            this.groupBox3.Controls.Add(this.numValidade);
-            this.groupBox3.Controls.Add(this.label9);
-            this.groupBox3.Controls.Add(this.label8);
-            this.groupBox3.Location = new System.Drawing.Point(11, 384);
-            this.groupBox3.Margin = new System.Windows.Forms.Padding(2);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox3.Size = new System.Drawing.Size(411, 126);
-            this.groupBox3.TabIndex = 119;
-            this.groupBox3.TabStop = false;
+            this.gbProdutoProcessado.Controls.Add(this.numUnidades);
+            this.gbProdutoProcessado.Controls.Add(this.label10);
+            this.gbProdutoProcessado.Controls.Add(this.txtMarca);
+            this.gbProdutoProcessado.Controls.Add(this.numValidade);
+            this.gbProdutoProcessado.Controls.Add(this.label9);
+            this.gbProdutoProcessado.Controls.Add(this.label8);
+            this.gbProdutoProcessado.Location = new System.Drawing.Point(11, 384);
+            this.gbProdutoProcessado.Margin = new System.Windows.Forms.Padding(2);
+            this.gbProdutoProcessado.Name = "gbProdutoProcessado";
+            this.gbProdutoProcessado.Padding = new System.Windows.Forms.Padding(2);
+            this.gbProdutoProcessado.Size = new System.Drawing.Size(411, 126);
+            this.gbProdutoProcessado.TabIndex = 119;
+            this.gbProdutoProcessado.TabStop = false;
             // 
             // numUnidades
             // 
-            this.numUnidades.Enabled = false;
             this.numUnidades.Location = new System.Drawing.Point(194, 38);
             this.numUnidades.Margin = new System.Windows.Forms.Padding(2);
             this.numUnidades.Name = "numUnidades";
@@ -408,7 +406,6 @@
             // 
             // txtMarca
             // 
-            this.txtMarca.Enabled = false;
             this.txtMarca.Location = new System.Drawing.Point(15, 37);
             this.txtMarca.Margin = new System.Windows.Forms.Padding(2);
             this.txtMarca.Name = "txtMarca";
@@ -417,7 +414,6 @@
             // 
             // numValidade
             // 
-            this.numValidade.Enabled = false;
             this.numValidade.Location = new System.Drawing.Point(16, 95);
             this.numValidade.Margin = new System.Windows.Forms.Padding(2);
             this.numValidade.Name = "numValidade";
@@ -446,25 +442,24 @@
             this.label8.TabIndex = 107;
             this.label8.Text = "Unid./Embalagem";
             // 
-            // groupBox4
+            // gbRefeicaoPronta
             // 
-            this.groupBox4.Controls.Add(this.cbGourmet);
-            this.groupBox4.Controls.Add(this.label11);
-            this.groupBox4.Controls.Add(this.txtModoPrep);
-            this.groupBox4.Controls.Add(this.numTempoPrep);
-            this.groupBox4.Controls.Add(this.label12);
-            this.groupBox4.Location = new System.Drawing.Point(11, 254);
-            this.groupBox4.Margin = new System.Windows.Forms.Padding(2);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox4.Size = new System.Drawing.Size(411, 126);
-            this.groupBox4.TabIndex = 120;
-            this.groupBox4.TabStop = false;
+            this.gbRefeicaoPronta.Controls.Add(this.cbGourmet);
+            this.gbRefeicaoPronta.Controls.Add(this.label11);
+            this.gbRefeicaoPronta.Controls.Add(this.txtModoPrep);
+            this.gbRefeicaoPronta.Controls.Add(this.numTempoPrep);
+            this.gbRefeicaoPronta.Controls.Add(this.label12);
+            this.gbRefeicaoPronta.Location = new System.Drawing.Point(11, 254);
+            this.gbRefeicaoPronta.Margin = new System.Windows.Forms.Padding(2);
+            this.gbRefeicaoPronta.Name = "gbRefeicaoPronta";
+            this.gbRefeicaoPronta.Padding = new System.Windows.Forms.Padding(2);
+            this.gbRefeicaoPronta.Size = new System.Drawing.Size(411, 126);
+            this.gbRefeicaoPronta.TabIndex = 120;
+            this.gbRefeicaoPronta.TabStop = false;
             // 
             // cbGourmet
             // 
             this.cbGourmet.AutoSize = true;
-            this.cbGourmet.Enabled = false;
             this.cbGourmet.Location = new System.Drawing.Point(16, 83);
             this.cbGourmet.Margin = new System.Windows.Forms.Padding(2);
             this.cbGourmet.Name = "cbGourmet";
@@ -486,7 +481,6 @@
             // 
             // txtModoPrep
             // 
-            this.txtModoPrep.Enabled = false;
             this.txtModoPrep.Location = new System.Drawing.Point(16, 39);
             this.txtModoPrep.Margin = new System.Windows.Forms.Padding(2);
             this.txtModoPrep.Name = "txtModoPrep";
@@ -495,7 +489,6 @@
             // 
             // numTempoPrep
             // 
-            this.numTempoPrep.Enabled = false;
             this.numTempoPrep.Location = new System.Drawing.Point(194, 41);
             this.numTempoPrep.Margin = new System.Windows.Forms.Padding(2);
             this.numTempoPrep.Name = "numTempoPrep";
@@ -666,9 +659,9 @@
             this.Controls.Add(this.groupBox6);
             this.Controls.Add(this.btnAnterior);
             this.Controls.Add(this.groupBox5);
-            this.Controls.Add(this.groupBox4);
-            this.Controls.Add(this.groupBox3);
-            this.Controls.Add(this.groupBox2);
+            this.Controls.Add(this.gbRefeicaoPronta);
+            this.Controls.Add(this.gbProdutoProcessado);
+            this.Controls.Add(this.gbProdutoNatural);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnDistribuidores);
             this.Controls.Add(this.label1);
@@ -682,14 +675,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.numProteinas)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numLipidos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numHidratos)).EndInit();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox3.PerformLayout();
+            this.gbProdutoNatural.ResumeLayout(false);
+            this.gbProdutoNatural.PerformLayout();
+            this.gbProdutoProcessado.ResumeLayout(false);
+            this.gbProdutoProcessado.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numUnidades)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numValidade)).EndInit();
-            this.groupBox4.ResumeLayout(false);
-            this.groupBox4.PerformLayout();
+            this.gbRefeicaoPronta.ResumeLayout(false);
+            this.gbRefeicaoPronta.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numTempoPrep)).EndInit();
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
@@ -721,17 +714,17 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.CheckBox chAlergénios;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.GroupBox gbProdutoNatural;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtPais;
         private System.Windows.Forms.CheckBox cbBiologico;
-        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.GroupBox gbProdutoProcessado;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox txtMarca;
         private System.Windows.Forms.NumericUpDown numValidade;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.GroupBox gbRefeicaoPronta;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox txtModoPrep;
         private System.Windows.Forms.NumericUpDown numTempoPrep;

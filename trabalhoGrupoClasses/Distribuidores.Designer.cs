@@ -43,7 +43,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblnumDist = new System.Windows.Forms.Label();
             this.txtNumDistrib = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
@@ -118,7 +118,7 @@
             // txtNomeNovoDistrib
             // 
             this.txtNomeNovoDistrib.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNomeNovoDistrib.ForeColor = System.Drawing.Color.Silver;
+            this.txtNomeNovoDistrib.ForeColor = System.Drawing.Color.Black;
             this.txtNomeNovoDistrib.Location = new System.Drawing.Point(16, 57);
             this.txtNomeNovoDistrib.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtNomeNovoDistrib.Name = "txtNomeNovoDistrib";
@@ -154,6 +154,7 @@
             this.btnNovoDistrib.TabIndex = 40;
             this.btnNovoDistrib.Text = "Inserir";
             this.btnNovoDistrib.UseVisualStyleBackColor = true;
+            this.btnNovoDistrib.Click += new System.EventHandler(this.btnNovoDistrib_Click);
             // 
             // lblDistribuidores
             // 
@@ -205,7 +206,7 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.label1);
+            this.groupBox2.Controls.Add(this.lblnumDist);
             this.groupBox2.Controls.Add(this.txtNumDistrib);
             this.groupBox2.Controls.Add(this.txtNomeProduto);
             this.groupBox2.Controls.Add(this.label3);
@@ -221,16 +222,16 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Produto";
             // 
-            // label1
+            // lblnumDist
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Gray;
-            this.label1.Location = new System.Drawing.Point(656, 68);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(62, 16);
-            this.label1.TabIndex = 42;
-            this.label1.Text = "(máx 10)";
+            this.lblnumDist.AutoSize = true;
+            this.lblnumDist.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblnumDist.ForeColor = System.Drawing.Color.Gray;
+            this.lblnumDist.Location = new System.Drawing.Point(656, 68);
+            this.lblnumDist.Name = "lblnumDist";
+            this.lblnumDist.Size = new System.Drawing.Size(62, 16);
+            this.lblnumDist.TabIndex = 42;
+            this.lblnumDist.Text = "(máx 10)";
             // 
             // txtNumDistrib
             // 
@@ -349,7 +350,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblnumDist;
         private System.Windows.Forms.TextBox txtNumDistrib;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.GroupBox groupBox4;

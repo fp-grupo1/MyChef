@@ -11,7 +11,7 @@ namespace trabalhoGrupoClasses
         private string p_idCod;
         private string p_nome;
         private double p_custo;
-        private double p_vMProteina;
+        private double p_vMProteinas;
         private double p_vMLipidos;
         private double p_vMHidratos;
         private bool p_alergenio;
@@ -35,28 +35,52 @@ namespace trabalhoGrupoClasses
         public double Custo
         {
             get { return p_custo; }
-            set { p_custo = value; }
+            set
+            {
+                if (value>=0)
+                {
+                    p_custo = value;
+                }                 
+            }
         }
 
         // g/100g
-        public double VMProteina
+        public double VMProteinas
         {
-            get { return p_vMProteina; }
-            set { p_vMProteina = value; }
+            get { return p_vMProteinas; }
+            set 
+            {
+                if (value>=0) 
+                {
+                    p_vMProteinas = value; 
+                }
+            }
         }
 
         // g/100g
         public double VMLipidos
         {
             get { return p_vMLipidos; }
-            set { p_vMLipidos = value; }
+            set 
+            {
+                if (value >= 0)
+                {
+                    p_vMLipidos = value; 
+                }
+            }
         }
 
         // g/100g
         public double VMHidratos
         {
             get { return p_vMHidratos; }
-            set { p_vMHidratos = value; }
+            set 
+            {
+                if (value >= 0)
+                {
+                    p_vMHidratos = value;
+                }
+            }
         }
 
         public bool Alergenios
@@ -68,7 +92,13 @@ namespace trabalhoGrupoClasses
         public double Peso
         {
             get { return p_peso; }
-            set { p_peso = value; }
+            set 
+            {
+                if (value >= 0)
+                {
+                    p_peso = value;
+                }
+            }
         }
 
         public int NumDistribuidores
@@ -97,7 +127,7 @@ namespace trabalhoGrupoClasses
             int proteina = 4;
             int hidratos = 4;
             double resultado = 0;
-            resultado = p_vMLipidos * lipidos +p_vMHidratos * hidratos + p_vMProteina * proteina;
+            resultado = p_vMLipidos * lipidos +p_vMHidratos * hidratos + p_vMProteinas * proteina;
             return resultado;
         }
 
@@ -127,7 +157,9 @@ namespace trabalhoGrupoClasses
 
         // É implementado nas classes filhas, devolve se um produto é saudável
         public abstract bool ESaudavel();
+        
 
+        public abstract string TipoToString();
         // Devolve o sucesso ou não do registo de um novo distribuidor,
         // incrementando o número de distribuidores se não ultrapassar o número máximo de distribuidores
         public bool RegistarDistribuidor()
@@ -140,9 +172,23 @@ namespace trabalhoGrupoClasses
             
         }
 
+        // Recebendo um nome e o custo do produto, incrementando o número de distribuidores se não ultrapassar o número máximo de distribuidores
+        // Devolve o sucesso de atualizar o distribuidor principal, caso o custo seja inferior ao custo do distribuidor atual
+        public bool RegistarDistribuidor(string nome, double custo)
+        {
+            if (p_custo == 0 || custo < p_custo)
+            {
+                RemoverDistribuidor();
+                p_custo = custo;
+                p_nomeDistribuidorPrincipal = nome;
+            }
+
+            return RegistarDistribuidor();
+        }
+
         // Devolve o sucesso ou não do registo de um novo distribuidor,
         // incrementando o número de distribuidores se não ultrapassar o número máximo de distribuidores
-        private bool RemoverDistribuidor()
+        public bool RemoverDistribuidor()
         {
             if (NumDistribuidores == NumMaxDistribuidores)
             {
@@ -152,27 +198,14 @@ namespace trabalhoGrupoClasses
             else return false;
 
         }
-
-        // Recebendo um nome e o custo do produto, incrementando o número de distribuidores se não ultrapassar o número máximo de distribuidores
-        // Devolve o sucesso de atualizar o distribuidor principal, caso o custo seja inferior ao custo do distribuidor atual
-        public bool RegistarDistribuidor(string nome, double custo)
-        {           
-            if (custo < p_custo)
-            {
-                RemoverDistribuidor();
-                p_custo = custo;
-                p_nomeDistribuidorPrincipal = nome;               
-            }
-
-            return RegistarDistribuidor();
-        }
+        
 
         public ProdutoAlimentar(string codigo, string nome, double peso, int maxDistribuidores)
         {
             p_idCod = codigo;
             p_nome = nome;
             p_custo = 0;
-            p_vMProteina = 0;
+            p_vMProteinas = 0;
             p_vMLipidos = 0;
             p_vMHidratos = 0;
             p_alergenio = true;            
