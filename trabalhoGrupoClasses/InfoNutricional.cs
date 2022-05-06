@@ -13,6 +13,7 @@ namespace trabalhoGrupoClasses
     public partial class InfoNutricional : Form
     {
         private Form m_formPai;
+
         public InfoNutricional(Form formPai)
         {
             InitializeComponent();
