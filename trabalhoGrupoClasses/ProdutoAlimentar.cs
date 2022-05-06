@@ -35,28 +35,52 @@ namespace trabalhoGrupoClasses
         public double Custo
         {
             get { return p_custo; }
-            set { p_custo = value; }
+            set
+            {
+                if (value>=0)
+                {
+                    p_custo = value;
+                }                 
+            }
         }
 
         // g/100g
         public double VMProteinas
         {
             get { return p_vMProteinas; }
-            set { p_vMProteinas = value; }
+            set 
+            {
+                if (value>=0) 
+                {
+                    p_vMProteinas = value; 
+                }
+            }
         }
 
         // g/100g
         public double VMLipidos
         {
             get { return p_vMLipidos; }
-            set { p_vMLipidos = value; }
+            set 
+            {
+                if (value >= 0)
+                {
+                    p_vMLipidos = value; 
+                }
+            }
         }
 
         // g/100g
         public double VMHidratos
         {
             get { return p_vMHidratos; }
-            set { p_vMHidratos = value; }
+            set 
+            {
+                if (value >= 0)
+                {
+                    p_vMHidratos = value;
+                }
+            }
         }
 
         public bool Alergenios
@@ -68,7 +92,13 @@ namespace trabalhoGrupoClasses
         public double Peso
         {
             get { return p_peso; }
-            set { p_peso = value; }
+            set 
+            {
+                if (value >= 0)
+                {
+                    p_peso = value;
+                }
+            }
         }
 
         public int NumDistribuidores

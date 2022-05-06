@@ -16,7 +16,6 @@ namespace trabalhoGrupoClasses
 
         private ProdutoAlimentar umProduto;
 
-
         public Distribuidores(Form formPai, ProdutoAlimentar produto)
         {
             InitializeComponent();
@@ -32,13 +31,13 @@ namespace trabalhoGrupoClasses
 
         public void PopularCampos()
         {
-            txtIdProduto.Text = produtotestedist.IdCod;
-            txtNomeProduto.Text = produtotestedist.Nome;
-            txtNumDistrib.Text = produtotestedist.NumDistribuidores.ToString();
-            lblnumDist.Text = "(máx: " + produtotestedist.NumMaxDistribuidores.ToString() + ")";
+            txtIdProduto.Text = umProduto.IdCod;
+            txtNomeProduto.Text = umProduto.Nome;
+            txtNumDistrib.Text = umProduto.NumDistribuidores.ToString();
+            lblnumDist.Text = "(máx: " + umProduto.NumMaxDistribuidores.ToString() + ")";
 
-            txtNomeDistrib.Text = produtotestedist.NomeDistribuidorPrincipal;
-            txtCustoProd.Text = produtotestedist.Custo.ToString();            
+            txtNomeDistrib.Text = umProduto.NomeDistribuidorPrincipal;
+            txtCustoProd.Text = umProduto.Custo.ToString();
         }
 
 
@@ -56,13 +55,13 @@ namespace trabalhoGrupoClasses
 
             if (nome.Length > 0 && custo > 0)
             {
-                if (produtotestedist.RegistarDistribuidor(nome, custo))
+                if (umProduto.RegistarDistribuidor(nome, custo))
                 {
                     MessageBox.Show("Distribuidor registado com sucesso.");
                 }
                 else MessageBox.Show("Distribuidor não foi registado.");
             }
-            else if (produtotestedist.RegistarDistribuidor())
+            else if (umProduto.RegistarDistribuidor())
             {
                 MessageBox.Show("Distribuidor registado com sucesso.");
             }
