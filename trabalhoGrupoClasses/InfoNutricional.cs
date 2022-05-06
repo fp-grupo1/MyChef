@@ -13,12 +13,11 @@ namespace trabalhoGrupoClasses
     public partial class InfoNutricional : Form
     {
         private Form m_formPai;
-        private ProdutoAlimentar produtoAMostrar;
-        public InfoNutricional(Form formPai, ProdutoAlimentar produto)
+
+        public InfoNutricional(Form formPai)
         {
             InitializeComponent();
             m_formPai = formPai;
-            produtoAMostrar = produto;
         }
 
         private void btnAnterior_Click(object sender, EventArgs e)

@@ -30,42 +30,37 @@
         {
             this.btnAnterior = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
-            this.txtCusto = new System.Windows.Forms.TextBox();
-            this.lblCusto = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.btnPesquisa = new System.Windows.Forms.Button();
             this.txtPeso = new System.Windows.Forms.TextBox();
             this.txtNomeProduto = new System.Windows.Forms.TextBox();
-            this.txtCodigoID = new System.Windows.Forms.TextBox();
-            this.lblCodigoID = new System.Windows.Forms.Label();
             this.lblNomeProduto = new System.Windows.Forms.Label();
             this.lblPeso = new System.Windows.Forms.Label();
-            this.nupProteina = new System.Windows.Forms.NumericUpDown();
-            this.nudLipidos = new System.Windows.Forms.NumericUpDown();
-            this.nudHidratosdeCarbono = new System.Windows.Forms.NumericUpDown();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.gbAlergenios = new System.Windows.Forms.GroupBox();
-            this.rbAlergeniosNao = new System.Windows.Forms.RadioButton();
-            this.rbAlergeniosSim = new System.Windows.Forms.RadioButton();
             this.lblHidratosdeCarbono = new System.Windows.Forms.Label();
             this.lblLipidos = new System.Windows.Forms.Label();
             this.lblProteina = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.lblInformacaoNutricional = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.nupProteina)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudLipidos)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudHidratosdeCarbono)).BeginInit();
-            this.gbAlergenios.SuspendLayout();
+            this.txtProteina = new System.Windows.Forms.TextBox();
+            this.txtLipidos = new System.Windows.Forms.TextBox();
+            this.txtHidratosdeCarbono = new System.Windows.Forms.TextBox();
+            this.txtCalorias = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.txtSaudavel = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnAnterior
             // 
-            this.btnAnterior.Location = new System.Drawing.Point(20, 20);
-            this.btnAnterior.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+
+            this.btnAnterior.Location = new System.Drawing.Point(29, 31);
+            this.btnAnterior.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAnterior.Name = "btnAnterior";
-            this.btnAnterior.Size = new System.Drawing.Size(34, 27);
+            this.btnAnterior.Size = new System.Drawing.Size(51, 41);
+          
             this.btnAnterior.TabIndex = 99;
             this.btnAnterior.Text = "<";
             this.btnAnterior.UseVisualStyleBackColor = true;
@@ -75,95 +70,40 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(16, 63);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+
+            this.label3.Location = new System.Drawing.Point(25, 96);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(80, 19);
+            this.label3.Size = new System.Drawing.Size(119, 29);
             this.label3.TabIndex = 98;
             this.label3.Text = "Produtos";
             // 
-            // txtCusto
-            // 
-            this.txtCusto.Location = new System.Drawing.Point(583, 125);
-            this.txtCusto.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.txtCusto.Name = "txtCusto";
-            this.txtCusto.Size = new System.Drawing.Size(87, 20);
-            this.txtCusto.TabIndex = 97;
-            // 
-            // lblCusto
-            // 
-            this.lblCusto.AutoSize = true;
-            this.lblCusto.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCusto.Location = new System.Drawing.Point(580, 102);
-            this.lblCusto.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblCusto.Name = "lblCusto";
-            this.lblCusto.Size = new System.Drawing.Size(44, 16);
-            this.lblCusto.TabIndex = 96;
-            this.lblCusto.Text = "Custo";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(673, 127);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(13, 13);
-            this.label6.TabIndex = 95;
-            this.label6.Text = "€";
-            // 
-            // btnPesquisa
-            // 
-            this.btnPesquisa.Location = new System.Drawing.Point(104, 122);
-            this.btnPesquisa.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.btnPesquisa.Name = "btnPesquisa";
-            this.btnPesquisa.Size = new System.Drawing.Size(57, 24);
-            this.btnPesquisa.TabIndex = 94;
-            this.btnPesquisa.Text = "Pesquisa";
-            this.btnPesquisa.UseVisualStyleBackColor = true;
-            // 
             // txtPeso
             // 
-            this.txtPeso.Location = new System.Drawing.Point(462, 125);
-            this.txtPeso.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtPeso.Location = new System.Drawing.Point(441, 195);
+            this.txtPeso.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtPeso.Name = "txtPeso";
-            this.txtPeso.Size = new System.Drawing.Size(87, 20);
+            this.txtPeso.ReadOnly = true;
+            this.txtPeso.Size = new System.Drawing.Size(129, 26);
+
             this.txtPeso.TabIndex = 93;
             // 
             // txtNomeProduto
             // 
-            this.txtNomeProduto.Location = new System.Drawing.Point(187, 125);
-            this.txtNomeProduto.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+
+            this.txtNomeProduto.Location = new System.Drawing.Point(28, 195);
+            this.txtNomeProduto.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtNomeProduto.Name = "txtNomeProduto";
-            this.txtNomeProduto.Size = new System.Drawing.Size(247, 20);
+            this.txtNomeProduto.ReadOnly = true;
+            this.txtNomeProduto.Size = new System.Drawing.Size(368, 26);
             this.txtNomeProduto.TabIndex = 92;
-            // 
-            // txtCodigoID
-            // 
-            this.txtCodigoID.Location = new System.Drawing.Point(20, 125);
-            this.txtCodigoID.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.txtCodigoID.Name = "txtCodigoID";
-            this.txtCodigoID.Size = new System.Drawing.Size(81, 20);
-            this.txtCodigoID.TabIndex = 91;
-            // 
-            // lblCodigoID
-            // 
-            this.lblCodigoID.AutoSize = true;
-            this.lblCodigoID.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCodigoID.Location = new System.Drawing.Point(17, 102);
-            this.lblCodigoID.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblCodigoID.Name = "lblCodigoID";
-            this.lblCodigoID.Size = new System.Drawing.Size(69, 16);
-            this.lblCodigoID.TabIndex = 90;
-            this.lblCodigoID.Text = "Código ID";
-            // 
             // lblNomeProduto
             // 
             this.lblNomeProduto.AutoSize = true;
             this.lblNomeProduto.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNomeProduto.Location = new System.Drawing.Point(184, 102);
-            this.lblNomeProduto.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+
+            this.lblNomeProduto.Location = new System.Drawing.Point(25, 159);
             this.lblNomeProduto.Name = "lblNomeProduto";
-            this.lblNomeProduto.Size = new System.Drawing.Size(97, 16);
+            this.lblNomeProduto.Size = new System.Drawing.Size(136, 23);
             this.lblNomeProduto.TabIndex = 89;
             this.lblNomeProduto.Text = "Nome Produto";
             // 
@@ -171,46 +111,23 @@
             // 
             this.lblPeso.AutoSize = true;
             this.lblPeso.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPeso.Location = new System.Drawing.Point(459, 102);
-            this.lblPeso.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+
+            this.lblPeso.Location = new System.Drawing.Point(436, 159);
             this.lblPeso.Name = "lblPeso";
-            this.lblPeso.Size = new System.Drawing.Size(39, 16);
+            this.lblPeso.Size = new System.Drawing.Size(55, 23);
             this.lblPeso.TabIndex = 88;
             this.lblPeso.Text = "Peso";
-            // 
-            // nupProteina
-            // 
-            this.nupProteina.Location = new System.Drawing.Point(86, 257);
-            this.nupProteina.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.nupProteina.Name = "nupProteina";
-            this.nupProteina.Size = new System.Drawing.Size(63, 20);
-            this.nupProteina.TabIndex = 87;
-            // 
-            // nudLipidos
-            // 
-            this.nudLipidos.Location = new System.Drawing.Point(240, 257);
-            this.nudLipidos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.nudLipidos.Name = "nudLipidos";
-            this.nudLipidos.Size = new System.Drawing.Size(63, 20);
-            this.nudLipidos.TabIndex = 86;
-            // 
-            // nudHidratosdeCarbono
-            // 
-            this.nudHidratosdeCarbono.Location = new System.Drawing.Point(482, 254);
-            this.nudHidratosdeCarbono.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.nudHidratosdeCarbono.Name = "nudHidratosdeCarbono";
-            this.nudHidratosdeCarbono.Size = new System.Drawing.Size(63, 20);
-            this.nudHidratosdeCarbono.TabIndex = 85;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.Gray;
-            this.label5.Location = new System.Drawing.Point(194, 329);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+
+            this.label5.Location = new System.Drawing.Point(291, 506);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(0, 14);
+            this.label5.Size = new System.Drawing.Size(0, 18);
+
             this.label5.TabIndex = 84;
             // 
             // label4
@@ -218,59 +135,25 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Gray;
-            this.label4.Location = new System.Drawing.Point(194, 310);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+
+            this.label4.Location = new System.Drawing.Point(264, 479);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(492, 14);
+            this.label4.Size = new System.Drawing.Size(711, 18);
+
             this.label4.TabIndex = 83;
             this.label4.Text = "Disclaimer: É necessário e obrigatório informar o cliente sobre a existência de a" +
     "lergénios no produto.";
             // 
-            // gbAlergenios
-            // 
-            this.gbAlergenios.Controls.Add(this.rbAlergeniosNao);
-            this.gbAlergenios.Controls.Add(this.rbAlergeniosSim);
-            this.gbAlergenios.Location = new System.Drawing.Point(20, 305);
-            this.gbAlergenios.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.gbAlergenios.Name = "gbAlergenios";
-            this.gbAlergenios.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.gbAlergenios.Size = new System.Drawing.Size(129, 53);
-            this.gbAlergenios.TabIndex = 82;
-            this.gbAlergenios.TabStop = false;
-            this.gbAlergenios.Text = "Alergénios";
-            // 
-            // rbAlergeniosNao
-            // 
-            this.rbAlergeniosNao.AutoSize = true;
-            this.rbAlergeniosNao.Location = new System.Drawing.Point(66, 24);
-            this.rbAlergeniosNao.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.rbAlergeniosNao.Name = "rbAlergeniosNao";
-            this.rbAlergeniosNao.Size = new System.Drawing.Size(45, 17);
-            this.rbAlergeniosNao.TabIndex = 1;
-            this.rbAlergeniosNao.TabStop = true;
-            this.rbAlergeniosNao.Text = "Não";
-            this.rbAlergeniosNao.UseVisualStyleBackColor = true;
-            // 
-            // rbAlergeniosSim
-            // 
-            this.rbAlergeniosSim.AutoSize = true;
-            this.rbAlergeniosSim.Location = new System.Drawing.Point(4, 24);
-            this.rbAlergeniosSim.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.rbAlergeniosSim.Name = "rbAlergeniosSim";
-            this.rbAlergeniosSim.Size = new System.Drawing.Size(42, 17);
-            this.rbAlergeniosSim.TabIndex = 0;
-            this.rbAlergeniosSim.TabStop = true;
-            this.rbAlergeniosSim.Text = "Sim";
-            this.rbAlergeniosSim.UseVisualStyleBackColor = true;
-            // 
+
             // lblHidratosdeCarbono
             // 
             this.lblHidratosdeCarbono.AutoSize = true;
             this.lblHidratosdeCarbono.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblHidratosdeCarbono.Location = new System.Drawing.Point(334, 257);
-            this.lblHidratosdeCarbono.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+
+            this.lblHidratosdeCarbono.Location = new System.Drawing.Point(493, 395);
             this.lblHidratosdeCarbono.Name = "lblHidratosdeCarbono";
-            this.lblHidratosdeCarbono.Size = new System.Drawing.Size(138, 16);
+            this.lblHidratosdeCarbono.Size = new System.Drawing.Size(192, 23);
+
             this.lblHidratosdeCarbono.TabIndex = 81;
             this.lblHidratosdeCarbono.Text = "Hidratos de Carbono";
             // 
@@ -278,10 +161,11 @@
             // 
             this.lblLipidos.AutoSize = true;
             this.lblLipidos.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLipidos.Location = new System.Drawing.Point(175, 257);
-            this.lblLipidos.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+
+            this.lblLipidos.Location = new System.Drawing.Point(263, 395);
             this.lblLipidos.Name = "lblLipidos";
-            this.lblLipidos.Size = new System.Drawing.Size(53, 16);
+            this.lblLipidos.Size = new System.Drawing.Size(74, 23);
+
             this.lblLipidos.TabIndex = 80;
             this.lblLipidos.Text = "Lípidos";
             // 
@@ -289,10 +173,11 @@
             // 
             this.lblProteina.AutoSize = true;
             this.lblProteina.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblProteina.Location = new System.Drawing.Point(16, 257);
-            this.lblProteina.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+
+            this.lblProteina.Location = new System.Drawing.Point(25, 395);
             this.lblProteina.Name = "lblProteina";
-            this.lblProteina.Size = new System.Drawing.Size(61, 16);
+            this.lblProteina.Size = new System.Drawing.Size(85, 23);
+
             this.lblProteina.TabIndex = 79;
             this.lblProteina.Text = "Proteína";
             // 
@@ -301,10 +186,11 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Gray;
-            this.label2.Location = new System.Drawing.Point(16, 218);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+
+            this.label2.Location = new System.Drawing.Point(24, 335);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(290, 14);
+            this.label2.Size = new System.Drawing.Size(412, 18);
+
             this.label2.TabIndex = 78;
             this.label2.Text = " Informar sempre o cliente quando requisitados os valores.";
             // 
@@ -313,10 +199,11 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Gray;
-            this.label1.Location = new System.Drawing.Point(18, 199);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+
+            this.label1.Location = new System.Drawing.Point(27, 306);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(474, 14);
+            this.label1.Size = new System.Drawing.Size(681, 18);
+
             this.label1.TabIndex = 77;
             this.label1.Text = "Disclaimer: Todos os valores apresentados estão representados em valores médios e" +
     " não totais.";
@@ -325,50 +212,133 @@
             // 
             this.lblInformacaoNutricional.AutoSize = true;
             this.lblInformacaoNutricional.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblInformacaoNutricional.Location = new System.Drawing.Point(16, 171);
-            this.lblInformacaoNutricional.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+
+            this.lblInformacaoNutricional.Location = new System.Drawing.Point(25, 262);
             this.lblInformacaoNutricional.Name = "lblInformacaoNutricional";
-            this.lblInformacaoNutricional.Size = new System.Drawing.Size(182, 19);
+            this.lblInformacaoNutricional.Size = new System.Drawing.Size(275, 29);
+
             this.lblInformacaoNutricional.TabIndex = 76;
             this.lblInformacaoNutricional.Text = "Informação Nutricional";
             // 
+            // txtProteina
+            // 
+            this.txtProteina.Location = new System.Drawing.Point(141, 395);
+            this.txtProteina.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtProteina.Name = "txtProteina";
+            this.txtProteina.ReadOnly = true;
+            this.txtProteina.Size = new System.Drawing.Size(95, 26);
+            this.txtProteina.TabIndex = 100;
+            // 
+            // txtLipidos
+            // 
+            this.txtLipidos.Location = new System.Drawing.Point(365, 395);
+            this.txtLipidos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtLipidos.Name = "txtLipidos";
+            this.txtLipidos.ReadOnly = true;
+            this.txtLipidos.Size = new System.Drawing.Size(95, 26);
+            this.txtLipidos.TabIndex = 101;
+            // 
+            // txtHidratosdeCarbono
+            // 
+            this.txtHidratosdeCarbono.Location = new System.Drawing.Point(712, 392);
+            this.txtHidratosdeCarbono.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtHidratosdeCarbono.Name = "txtHidratosdeCarbono";
+            this.txtHidratosdeCarbono.ReadOnly = true;
+            this.txtHidratosdeCarbono.Size = new System.Drawing.Size(95, 26);
+            this.txtHidratosdeCarbono.TabIndex = 102;
+            // 
+            // txtCalorias
+            // 
+            this.txtCalorias.Location = new System.Drawing.Point(621, 195);
+            this.txtCalorias.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtCalorias.Name = "txtCalorias";
+            this.txtCalorias.ReadOnly = true;
+            this.txtCalorias.Size = new System.Drawing.Size(129, 26);
+            this.txtCalorias.TabIndex = 104;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(616, 159);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(82, 23);
+            this.label6.TabIndex = 103;
+            this.label6.Text = "Calorias";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(141, 471);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.ReadOnly = true;
+            this.textBox1.Size = new System.Drawing.Size(95, 26);
+            this.textBox1.TabIndex = 106;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(24, 474);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(102, 23);
+            this.label7.TabIndex = 105;
+            this.label7.Text = "Alergénios";
+            // 
+            // txtSaudavel
+            // 
+            this.txtSaudavel.Location = new System.Drawing.Point(800, 195);
+            this.txtSaudavel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtSaudavel.Name = "txtSaudavel";
+            this.txtSaudavel.ReadOnly = true;
+            this.txtSaudavel.Size = new System.Drawing.Size(129, 26);
+            this.txtSaudavel.TabIndex = 108;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(795, 159);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(90, 23);
+            this.label8.TabIndex = 107;
+            this.label8.Text = "Saudável";
+            // 
             // InfoNutricional
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(699, 376);
+            this.ClientSize = new System.Drawing.Size(1048, 579);
+            this.Controls.Add(this.txtSaudavel);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.txtCalorias);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.txtHidratosdeCarbono);
+            this.Controls.Add(this.txtLipidos);
+            this.Controls.Add(this.txtProteina);
+
             this.Controls.Add(this.btnAnterior);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.txtCusto);
-            this.Controls.Add(this.lblCusto);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.btnPesquisa);
             this.Controls.Add(this.txtPeso);
             this.Controls.Add(this.txtNomeProduto);
-            this.Controls.Add(this.txtCodigoID);
-            this.Controls.Add(this.lblCodigoID);
             this.Controls.Add(this.lblNomeProduto);
             this.Controls.Add(this.lblPeso);
-            this.Controls.Add(this.nupProteina);
-            this.Controls.Add(this.nudLipidos);
-            this.Controls.Add(this.nudHidratosdeCarbono);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.gbAlergenios);
             this.Controls.Add(this.lblHidratosdeCarbono);
             this.Controls.Add(this.lblLipidos);
             this.Controls.Add(this.lblProteina);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lblInformacaoNutricional);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+
             this.Name = "InfoNutricional";
             this.Text = "Informação Nutricional";
-            ((System.ComponentModel.ISupportInitialize)(this.nupProteina)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudLipidos)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudHidratosdeCarbono)).EndInit();
-            this.gbAlergenios.ResumeLayout(false);
-            this.gbAlergenios.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -378,29 +348,26 @@
 
         private System.Windows.Forms.Button btnAnterior;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txtCusto;
-        private System.Windows.Forms.Label lblCusto;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Button btnPesquisa;
         private System.Windows.Forms.TextBox txtPeso;
         private System.Windows.Forms.TextBox txtNomeProduto;
-        private System.Windows.Forms.TextBox txtCodigoID;
-        private System.Windows.Forms.Label lblCodigoID;
         private System.Windows.Forms.Label lblNomeProduto;
         private System.Windows.Forms.Label lblPeso;
-        private System.Windows.Forms.NumericUpDown nupProteina;
-        private System.Windows.Forms.NumericUpDown nudLipidos;
-        private System.Windows.Forms.NumericUpDown nudHidratosdeCarbono;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.GroupBox gbAlergenios;
-        private System.Windows.Forms.RadioButton rbAlergeniosNao;
-        private System.Windows.Forms.RadioButton rbAlergeniosSim;
         private System.Windows.Forms.Label lblHidratosdeCarbono;
         private System.Windows.Forms.Label lblLipidos;
         private System.Windows.Forms.Label lblProteina;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblInformacaoNutricional;
+        private System.Windows.Forms.TextBox txtProteina;
+        private System.Windows.Forms.TextBox txtLipidos;
+        private System.Windows.Forms.TextBox txtHidratosdeCarbono;
+        private System.Windows.Forms.TextBox txtCalorias;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox txtSaudavel;
+        private System.Windows.Forms.Label label8;
     }
 }
