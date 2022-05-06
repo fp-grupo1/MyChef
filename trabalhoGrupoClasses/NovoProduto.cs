@@ -78,7 +78,35 @@ namespace trabalhoGrupoClasses
                     break;
             }
         }
-        
+        //{
+        //    if (cbTipo.Text == "Produto Natural")
+        //    {
+        //        umProdutoAlimentar = new ProdutoNatural(txtCodigoID.Text, txtNomeProduto.Text, Convert.ToDouble(txtPeso.Text));
+        //        RegistarInfoProduto();
+        //        txtPais.Enabled = true;
+        //        cbBiologico.Enabled = true;
+        //    }
+        //    else if (cbTipo.Text == "Produto Processado")
+        //    {
+        //        umProdutoAlimentar = new ProdutoProcessado(txtCodigoID.Text, txtNomeProduto.Text, Convert.ToDouble(txtPeso.Text), txtMarca.Text);
+        //        RegistarInfoProduto();
+        //        txtMarca.Enabled = true;
+        //        numUnidades.Enabled = true;
+        //        numValidade.Enabled = true;
+        //    }
+        //    else
+        //    {
+        //        umProdutoAlimentar = new RefeicaoPronta(txtCodigoID.Text, txtNomeProduto.Text, Convert.ToDouble(txtPeso.Text), txtMarca.Text);
+        //        RegistarInfoProduto();
+        //        txtModoPrep.Enabled = true;
+        //        numTempoPrep.Enabled = true;
+        //        cbGourmet.Enabled = true;
+        //    }
+        //    btnRegistoProduto.Enabled = true;
+        //    btnRegistarTipo.Enabled = false;
+        //    listaDeProdutos.Add(umProdutoAlimentar);
+        //    MessageBox.Show("A informação inicial do produto alimentar " + cbTipo.Text + " foi inserida com sucesso, finalize o resto da informação para o tipo de produto que escolheu.");
+        //}
 
         private void RegistarInfoProduto()
         {
@@ -87,6 +115,7 @@ namespace trabalhoGrupoClasses
             umProdutoAlimentar.VMLipidos = Convert.ToDouble(numLipidos.Value);
             umProdutoAlimentar.VMHidratos = Convert.ToDouble(numHidratos.Value);
             umProdutoAlimentar.Alergenios = chAlergénios.Checked;
+
         }
 
         private void btnRegistoProduto_Click(object sender, EventArgs e)

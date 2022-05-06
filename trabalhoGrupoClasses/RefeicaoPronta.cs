@@ -11,7 +11,7 @@ namespace trabalhoGrupoClasses
         private string p_modoPreparacao;
         private int p_tempoPreparacao;
         private bool p_gourmet;
-
+        
 
 
         public string ModoPreparacao
@@ -23,13 +23,7 @@ namespace trabalhoGrupoClasses
         public int TempoPreparacao
         {
             get { return p_tempoPreparacao; }
-            set
-            {
-                if (value >= 0)
-                {
-                    p_tempoPreparacao = value;
-                }
-            }
+            set { p_tempoPreparacao = value; }
         }
 
         public bool Gourmet
@@ -42,8 +36,8 @@ namespace trabalhoGrupoClasses
         public override double CalcMargem()
         {
             double resultado = 0;
-            if (Gourmet)
-            {
+            if (Gourmet) 
+            {        
                 resultado = Custo * 0.2;
             }
             else resultado = base.CalcMargem();
@@ -71,7 +65,7 @@ namespace trabalhoGrupoClasses
         {
             p_modoPreparacao = "sem informação adicional";
             p_tempoPreparacao = 180;
-            p_gourmet = false;
+            p_gourmet = false;            
         }
     }
 }

@@ -21,25 +21,13 @@ namespace trabalhoGrupoClasses
         public int UnidadesEmbalagem
         {
             get { return p_unidadesEmbalagem; }
-            set
-            {
-                if (value >= 0)
-                {
-                    p_unidadesEmbalagem = value;
-                }
-            }
+            set { p_unidadesEmbalagem = value; }
         }
 
         public int Validade
         {
             get { return p_validade; }
-            set
-            {
-                if (value >= 0)
-                {
-                    p_validade = value;
-                }
-            }
+            set { p_validade = value; }
         }
 
         // Devolve o total de calorias de um produto alimentar, tendo em conta o respetivo peso e unidades por embalagem
