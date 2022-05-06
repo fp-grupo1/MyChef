@@ -92,6 +92,7 @@ namespace trabalhoGrupoClasses
 
             if (NutricionalTotalCheck() && CamposGeraisPreenchidos())
             {
+
                 //Registar dados especificos à categoria do produto
                 switch (tipoDeProduto)
                 {
