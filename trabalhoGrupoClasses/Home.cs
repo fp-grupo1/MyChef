@@ -19,18 +19,15 @@ namespace trabalhoGrupoClasses
 
         public BindingList<ProdutoAlimentar> ListaDeProdutos { get; private set; }
         private BindingSource dgProdutosFonte;
-        private readonly int colunaId = 0;
-        private readonly int colunaNome = 1;
-        private readonly int colunaCusto = 2;
-        private readonly int colunaTipo = 3;
 
-        //Construtor do Formulário Home
+
+        //Construtor
         public Home()
         {
             InitializeComponent();
             ListaDeProdutos = new BindingList<ProdutoAlimentar>();
             dgProdutosFonte = new BindingSource();
-            
+
             dgProdutosFonte.DataSource = ListaDeProdutos;
             dgProdutos.DataSource = dgProdutosFonte;
         }
@@ -39,10 +36,10 @@ namespace trabalhoGrupoClasses
         //Carregar dados para a classe utilizar
         private void Home_Load(object sender, EventArgs e)
         {
-            //PopulateList();
-            dgProdutos.SelectedRows[0].Selected = false;           
+            PopulateList();
+            dgProdutos.SelectedRows[0].Selected = false;
+            
         }
-        
         //Abre formulário para mostrar e gerir informação sobre os distribuidores do produto selecionado
         private void btnDistribuidores_Click(object sender, EventArgs e)
         {
@@ -59,7 +56,6 @@ namespace trabalhoGrupoClasses
                 MensagemProdutoNaoSelecionado();
             }
         }
-        
         //Abre formulário para Criar novo Produto
         private void btnNovo_Click(object sender, EventArgs e)
         {
@@ -69,7 +65,6 @@ namespace trabalhoGrupoClasses
             this.Hide();
             formNovoProduto.Show();
         }      
-        
         //Abre formulário para editar o produto selecionado
         private void btnEditar_Click(object sender, EventArgs e)
         {
@@ -86,42 +81,32 @@ namespace trabalhoGrupoClasses
                 MensagemProdutoNaoSelecionado();
             }   
         }                     
-        
         //Seleciona Produto da tabela  
         private void dgProdutos_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             PreencheCampos();
         }
-        
         //Apaga Produto
         private void btnApagar_Click(object sender, EventArgs e)
         {
-            if (dgProdutos.SelectedRows.Count != 0)
+            ProdutoAlimentar umProdutoApagar = dgProdutos.SelectedRows[0].DataBoundItem as ProdutoAlimentar;
+            DialogResult resposta = MessageBox.Show(
+                "Tem a certeza que pertende apagar o produto " + umProdutoApagar.Nome + "?",
+                "Alteração do Produto",
+                MessageBoxButtons.OKCancel,
+                MessageBoxIcon.Question);
+            if (resposta == DialogResult.OK)
             {
-                ProdutoAlimentar umProdutoApagar = dgProdutos.SelectedRows[0].DataBoundItem as ProdutoAlimentar;
-                DialogResult resposta = MessageBox.Show(
-                    "Tem a certeza que pertende apagar o produto " + umProdutoApagar.Nome + "?",
-                    "Alteração do Produto",
-                    MessageBoxButtons.OKCancel,
-                    MessageBoxIcon.Question);
-                if (resposta == DialogResult.OK)
-                {
-                    ListaDeProdutos.Remove(umProdutoApagar);
-                    PreencheCampos();
-                    MessageBox.Show(
-                        "Produto apagado com Sucesso",
-                        "Confirmação de ação apagar",
-                        MessageBoxButtons.OK,
-                        MessageBoxIcon.Information);
-                }
-            }
-            else
-            {
-                MensagemProdutoNaoSelecionado();
+                ListaDeProdutos.Remove(umProdutoApagar);
+                PreencheCampos();
+                MessageBox.Show(
+                    "Produto apagado com Sucesso",
+                    "Confirmação de ação apagar",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Information);
             }
         }
-        
-        //Procura Produto por nome
+        //Procura Produto
         private void btnPesquisa_Click(object sender, EventArgs e)
         {
             string palavraAProcurar = txtNomeProduto.Text;
@@ -140,17 +125,21 @@ namespace trabalhoGrupoClasses
                 {
                     foreach (DataGridViewRow linha in dgProdutos.Rows)
                     {
-                        if (linha.Cells[colunaNome].Value.Equals(palavraAProcurar))
+                        if (linha.Cells[1].Value.Equals(palavraAProcurar))
                         {
                             dgProdutos.ClearSelection();
                             linha.Selected = true;
+                            //dgProdutos.FirstDisplayedScrollingRowIndex = linha.Index;
                             PreencheCampos();
-                            dgProdutos.CurrentCell = linha.Cells[colunaNome];                           
-                        }                       
+                            dgProdutos.CurrentCell = linha.Cells[1];
+                            //break;
+                        }
+                       
+
                     }
                     foreach (DataGridViewRow linha in dgProdutos.Rows)
                     {
-                        if (!linha.Cells[colunaNome].Value.Equals(palavraAProcurar))
+                        if (!linha.Cells[1].Value.Equals(palavraAProcurar))
                         {
                             linha.Visible = false;
                         }
@@ -163,7 +152,6 @@ namespace trabalhoGrupoClasses
                 }
             }
         }
-        
         //Abre formulário para mostrar informação nutricional do produto selecionado
         private void btnInfoNutricinal_Click(object sender, EventArgs e)
         {
@@ -204,10 +192,10 @@ namespace trabalhoGrupoClasses
             umProdutoPP = new ProdutoProcessado("PP2", "Batatas Fritas Picantes", 5, "Lays");
             ListaDeProdutos.Add(umProdutoPP);
             dgProdutos[3, 3].Value = umProdutoPP.TipoToString();
-            var umProdutoRP = new RefeicaoPronta("RP1", "Bacalhau à Bráz", 5, "Iglo");
+            var umProdutoRP = new RefeicaoPronta("RP1", "Bacalhão à Bráz", 5, "Iglo");
             ListaDeProdutos.Add(umProdutoRP);
             dgProdutos[3, 4].Value = umProdutoRP.TipoToString();
-            umProdutoRP = new RefeicaoPronta("RP2", "Bacalhau à Zé do pipo", 5, "Iglo");
+            umProdutoRP = new RefeicaoPronta("RP2", "Bacalhão à Zé do pipo", 5, "Iglo");
             ListaDeProdutos.Add(umProdutoRP);
             dgProdutos[3, 5].Value = umProdutoRP.TipoToString();
             ListaDeProdutos.Add(new ProdutoNatural("PN2", "Nabos", 5));
@@ -220,7 +208,6 @@ namespace trabalhoGrupoClasses
             dgProdutos[3, 1].Value = umProdutoNat.TipoToString();
             ListaDeProdutos.Add(new ProdutoNatural("PN2", "couves", 5));
             dgProdutos[3, 1].Value = umProdutoNat.TipoToString();
-            //PreencherTipo();
         }       
         /*Metodo que popula as caixas de texto com informação da linha selecionada*/
         private void PreencheCampos()
@@ -252,57 +239,6 @@ namespace trabalhoGrupoClasses
                 }
             }
         }
-        private void PreencherTipo()
-        {
-            if (dgProdutos.SelectedRows[0].Selected)
-            {
-                foreach (DataGridViewRow linha in dgProdutos.Rows)
-                {
-                    if (linha.Cells[colunaTipo].Value == null)
-                    {
-                        ProdutoAlimentar umProdutoTipificar = dgProdutos.SelectedRows[0].DataBoundItem as ProdutoAlimentar;
-                        linha.Cells[3].Value = umProdutoTipificar.TipoToString();
-                    }
-                }
-            }
-        }
-        private void LimparEscolha()
-        {
-            if (dgProdutos.SelectedRows.Count != 0)
-            {
-                dgProdutos.SelectedRows[0].Selected = false;
-            }
-            txtNomeProduto.Text = "";
-            txtCodigoID.Text = "";
-            cbProdNaturais.Checked = false;
-            cbProdProcessados.Checked = false;
-            cbRefPronta.Checked = false;
-        }
 
-        private void dgProdutos_RowsAdded(object sender, DataGridViewRowsAddedEventArgs e)
-        {            
-            dgProdutos.Rows[ListaDeProdutos.Count - 1].Cells[colunaTipo].Value = ListaDeProdutos.Last().TipoToString();            
-        }
-
-        private void btnPesquisaId_Click(object sender, EventArgs e)
-        {
-            string IdAProcurar = txtCodigoID.Text;
-            foreach (DataGridViewRow linha in dgProdutos.Rows)
-            {
-                if (linha.Cells[colunaId].Value.Equals(IdAProcurar))
-                {
-                    dgProdutos.ClearSelection();
-                    linha.Selected = true;
-                    dgProdutos.FirstDisplayedScrollingRowIndex = linha.Index;
-                    PreencheCampos();
-                    dgProdutos.CurrentCell = linha.Cells[colunaId];
-                }
-            }
-        }
-
-        private void btnLimparEscolha_Click(object sender, EventArgs e)
-        {
-            LimparEscolha();
-        }
     }
 }

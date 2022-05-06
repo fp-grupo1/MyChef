@@ -29,9 +29,20 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgProdutos = new System.Windows.Forms.DataGridView();
+            this.idCodDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nomeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.custoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tipoDeProduto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.vMLipidosDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.vMHidratosDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.alergeniosDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.pesoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.numDistribuidoresDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nomeDistribuidorPrincipalDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.numMaxDistribuidoresDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.produtoAlimentarBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.btnDistribuidores = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.cbProdNaturais = new System.Windows.Forms.CheckBox();
@@ -50,23 +61,10 @@
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnNovo = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.btnPesquisaId = new System.Windows.Forms.Button();
-            this.idCodDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nomeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.custoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.vMLipidosDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.vMHidratosDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.alergeniosDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.pesoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.numDistribuidoresDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nomeDistribuidorPrincipalDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.numMaxDistribuidoresDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.produtoAlimentarBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.btnLimparEscolha = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgProdutos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.produtoAlimentarBindingSource)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.produtoAlimentarBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // dgProdutos
@@ -99,13 +97,110 @@
             this.dgProdutos.Size = new System.Drawing.Size(511, 266);
             this.dgProdutos.TabIndex = 91;
             this.dgProdutos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgProdutos_CellContentClick);
-            this.dgProdutos.RowsAdded += new System.Windows.Forms.DataGridViewRowsAddedEventHandler(this.dgProdutos_RowsAdded);
+            // 
+            // idCodDataGridViewTextBoxColumn
+            // 
+            this.idCodDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.idCodDataGridViewTextBoxColumn.DataPropertyName = "IdCod";
+            dataGridViewCellStyle1.Format = "string";
+            dataGridViewCellStyle1.NullValue = "\"\"";
+            this.idCodDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle1;
+            this.idCodDataGridViewTextBoxColumn.HeaderText = "Codigo";
+            this.idCodDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.idCodDataGridViewTextBoxColumn.Name = "idCodDataGridViewTextBoxColumn";
+            this.idCodDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // nomeDataGridViewTextBoxColumn
+            // 
+            this.nomeDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.nomeDataGridViewTextBoxColumn.DataPropertyName = "Nome";
+            this.nomeDataGridViewTextBoxColumn.HeaderText = "Nome";
+            this.nomeDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.nomeDataGridViewTextBoxColumn.Name = "nomeDataGridViewTextBoxColumn";
+            // 
+            // custoDataGridViewTextBoxColumn
+            // 
+            this.custoDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.custoDataGridViewTextBoxColumn.DataPropertyName = "Custo";
+            this.custoDataGridViewTextBoxColumn.HeaderText = "Custo";
+            this.custoDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.custoDataGridViewTextBoxColumn.Name = "custoDataGridViewTextBoxColumn";
             // 
             // tipoDeProduto
             // 
             this.tipoDeProduto.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.tipoDeProduto.HeaderText = "Tipo";
             this.tipoDeProduto.Name = "tipoDeProduto";
+            // 
+            // vMLipidosDataGridViewTextBoxColumn
+            // 
+            this.vMLipidosDataGridViewTextBoxColumn.DataPropertyName = "VMLipidos";
+            this.vMLipidosDataGridViewTextBoxColumn.HeaderText = "VMLipidos";
+            this.vMLipidosDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.vMLipidosDataGridViewTextBoxColumn.Name = "vMLipidosDataGridViewTextBoxColumn";
+            this.vMLipidosDataGridViewTextBoxColumn.Visible = false;
+            this.vMLipidosDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // vMHidratosDataGridViewTextBoxColumn
+            // 
+            this.vMHidratosDataGridViewTextBoxColumn.DataPropertyName = "VMHidratos";
+            this.vMHidratosDataGridViewTextBoxColumn.HeaderText = "VMHidratos";
+            this.vMHidratosDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.vMHidratosDataGridViewTextBoxColumn.Name = "vMHidratosDataGridViewTextBoxColumn";
+            this.vMHidratosDataGridViewTextBoxColumn.Visible = false;
+            this.vMHidratosDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // alergeniosDataGridViewCheckBoxColumn
+            // 
+            this.alergeniosDataGridViewCheckBoxColumn.DataPropertyName = "Alergenios";
+            this.alergeniosDataGridViewCheckBoxColumn.HeaderText = "Alergenios";
+            this.alergeniosDataGridViewCheckBoxColumn.MinimumWidth = 6;
+            this.alergeniosDataGridViewCheckBoxColumn.Name = "alergeniosDataGridViewCheckBoxColumn";
+            this.alergeniosDataGridViewCheckBoxColumn.Visible = false;
+            this.alergeniosDataGridViewCheckBoxColumn.Width = 125;
+            // 
+            // pesoDataGridViewTextBoxColumn
+            // 
+            this.pesoDataGridViewTextBoxColumn.DataPropertyName = "Peso";
+            this.pesoDataGridViewTextBoxColumn.HeaderText = "Peso";
+            this.pesoDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.pesoDataGridViewTextBoxColumn.Name = "pesoDataGridViewTextBoxColumn";
+            this.pesoDataGridViewTextBoxColumn.Visible = false;
+            this.pesoDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // numDistribuidoresDataGridViewTextBoxColumn
+            // 
+            this.numDistribuidoresDataGridViewTextBoxColumn.DataPropertyName = "NumDistribuidores";
+            this.numDistribuidoresDataGridViewTextBoxColumn.HeaderText = "NumDistribuidores";
+            this.numDistribuidoresDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.numDistribuidoresDataGridViewTextBoxColumn.Name = "numDistribuidoresDataGridViewTextBoxColumn";
+            this.numDistribuidoresDataGridViewTextBoxColumn.ReadOnly = true;
+            this.numDistribuidoresDataGridViewTextBoxColumn.Visible = false;
+            this.numDistribuidoresDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // nomeDistribuidorPrincipalDataGridViewTextBoxColumn
+            // 
+            this.nomeDistribuidorPrincipalDataGridViewTextBoxColumn.DataPropertyName = "NomeDistribuidorPrincipal";
+            this.nomeDistribuidorPrincipalDataGridViewTextBoxColumn.HeaderText = "NomeDistribuidorPrincipal";
+            this.nomeDistribuidorPrincipalDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.nomeDistribuidorPrincipalDataGridViewTextBoxColumn.Name = "nomeDistribuidorPrincipalDataGridViewTextBoxColumn";
+            this.nomeDistribuidorPrincipalDataGridViewTextBoxColumn.ReadOnly = true;
+            this.nomeDistribuidorPrincipalDataGridViewTextBoxColumn.Visible = false;
+            this.nomeDistribuidorPrincipalDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // numMaxDistribuidoresDataGridViewTextBoxColumn
+            // 
+            this.numMaxDistribuidoresDataGridViewTextBoxColumn.DataPropertyName = "NumMaxDistribuidores";
+            this.numMaxDistribuidoresDataGridViewTextBoxColumn.HeaderText = "NumMaxDistribuidores";
+            this.numMaxDistribuidoresDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.numMaxDistribuidoresDataGridViewTextBoxColumn.Name = "numMaxDistribuidoresDataGridViewTextBoxColumn";
+            this.numMaxDistribuidoresDataGridViewTextBoxColumn.ReadOnly = true;
+            this.numMaxDistribuidoresDataGridViewTextBoxColumn.Visible = false;
+            this.numMaxDistribuidoresDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // produtoAlimentarBindingSource
+            // 
+            this.produtoAlimentarBindingSource.DataSource = typeof(trabalhoGrupoClasses.ProdutoAlimentar);
             // 
             // btnDistribuidores
             // 
@@ -296,8 +391,6 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.btnLimparEscolha);
-            this.groupBox2.Controls.Add(this.btnPesquisaId);
             this.groupBox2.Controls.Add(this.lblCodigoID);
             this.groupBox2.Controls.Add(this.groupBox1);
             this.groupBox2.Controls.Add(this.lblNomeProduto);
@@ -315,125 +408,6 @@
             this.groupBox2.TabIndex = 93;
             this.groupBox2.TabStop = false;
             // 
-            // btnPesquisaId
-            // 
-            this.btnPesquisaId.Location = new System.Drawing.Point(93, 28);
-            this.btnPesquisaId.Margin = new System.Windows.Forms.Padding(2);
-            this.btnPesquisaId.Name = "btnPesquisaId";
-            this.btnPesquisaId.Size = new System.Drawing.Size(68, 26);
-            this.btnPesquisaId.TabIndex = 93;
-            this.btnPesquisaId.Text = "Pesquisa";
-            this.btnPesquisaId.UseVisualStyleBackColor = true;
-            this.btnPesquisaId.Click += new System.EventHandler(this.btnPesquisaId_Click);
-            // 
-            // idCodDataGridViewTextBoxColumn
-            // 
-            this.idCodDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.idCodDataGridViewTextBoxColumn.DataPropertyName = "IdCod";
-            dataGridViewCellStyle2.Format = "string";
-            dataGridViewCellStyle2.NullValue = "\"\"";
-            this.idCodDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle2;
-            this.idCodDataGridViewTextBoxColumn.HeaderText = "Codigo";
-            this.idCodDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.idCodDataGridViewTextBoxColumn.Name = "idCodDataGridViewTextBoxColumn";
-            this.idCodDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // nomeDataGridViewTextBoxColumn
-            // 
-            this.nomeDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.nomeDataGridViewTextBoxColumn.DataPropertyName = "Nome";
-            this.nomeDataGridViewTextBoxColumn.HeaderText = "Nome";
-            this.nomeDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.nomeDataGridViewTextBoxColumn.Name = "nomeDataGridViewTextBoxColumn";
-            // 
-            // custoDataGridViewTextBoxColumn
-            // 
-            this.custoDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.custoDataGridViewTextBoxColumn.DataPropertyName = "Custo";
-            this.custoDataGridViewTextBoxColumn.HeaderText = "Custo";
-            this.custoDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.custoDataGridViewTextBoxColumn.Name = "custoDataGridViewTextBoxColumn";
-            // 
-            // vMLipidosDataGridViewTextBoxColumn
-            // 
-            this.vMLipidosDataGridViewTextBoxColumn.DataPropertyName = "VMLipidos";
-            this.vMLipidosDataGridViewTextBoxColumn.HeaderText = "VMLipidos";
-            this.vMLipidosDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.vMLipidosDataGridViewTextBoxColumn.Name = "vMLipidosDataGridViewTextBoxColumn";
-            this.vMLipidosDataGridViewTextBoxColumn.Visible = false;
-            this.vMLipidosDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // vMHidratosDataGridViewTextBoxColumn
-            // 
-            this.vMHidratosDataGridViewTextBoxColumn.DataPropertyName = "VMHidratos";
-            this.vMHidratosDataGridViewTextBoxColumn.HeaderText = "VMHidratos";
-            this.vMHidratosDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.vMHidratosDataGridViewTextBoxColumn.Name = "vMHidratosDataGridViewTextBoxColumn";
-            this.vMHidratosDataGridViewTextBoxColumn.Visible = false;
-            this.vMHidratosDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // alergeniosDataGridViewCheckBoxColumn
-            // 
-            this.alergeniosDataGridViewCheckBoxColumn.DataPropertyName = "Alergenios";
-            this.alergeniosDataGridViewCheckBoxColumn.HeaderText = "Alergenios";
-            this.alergeniosDataGridViewCheckBoxColumn.MinimumWidth = 6;
-            this.alergeniosDataGridViewCheckBoxColumn.Name = "alergeniosDataGridViewCheckBoxColumn";
-            this.alergeniosDataGridViewCheckBoxColumn.Visible = false;
-            this.alergeniosDataGridViewCheckBoxColumn.Width = 125;
-            // 
-            // pesoDataGridViewTextBoxColumn
-            // 
-            this.pesoDataGridViewTextBoxColumn.DataPropertyName = "Peso";
-            this.pesoDataGridViewTextBoxColumn.HeaderText = "Peso";
-            this.pesoDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.pesoDataGridViewTextBoxColumn.Name = "pesoDataGridViewTextBoxColumn";
-            this.pesoDataGridViewTextBoxColumn.Visible = false;
-            this.pesoDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // numDistribuidoresDataGridViewTextBoxColumn
-            // 
-            this.numDistribuidoresDataGridViewTextBoxColumn.DataPropertyName = "NumDistribuidores";
-            this.numDistribuidoresDataGridViewTextBoxColumn.HeaderText = "NumDistribuidores";
-            this.numDistribuidoresDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.numDistribuidoresDataGridViewTextBoxColumn.Name = "numDistribuidoresDataGridViewTextBoxColumn";
-            this.numDistribuidoresDataGridViewTextBoxColumn.ReadOnly = true;
-            this.numDistribuidoresDataGridViewTextBoxColumn.Visible = false;
-            this.numDistribuidoresDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // nomeDistribuidorPrincipalDataGridViewTextBoxColumn
-            // 
-            this.nomeDistribuidorPrincipalDataGridViewTextBoxColumn.DataPropertyName = "NomeDistribuidorPrincipal";
-            this.nomeDistribuidorPrincipalDataGridViewTextBoxColumn.HeaderText = "NomeDistribuidorPrincipal";
-            this.nomeDistribuidorPrincipalDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.nomeDistribuidorPrincipalDataGridViewTextBoxColumn.Name = "nomeDistribuidorPrincipalDataGridViewTextBoxColumn";
-            this.nomeDistribuidorPrincipalDataGridViewTextBoxColumn.ReadOnly = true;
-            this.nomeDistribuidorPrincipalDataGridViewTextBoxColumn.Visible = false;
-            this.nomeDistribuidorPrincipalDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // numMaxDistribuidoresDataGridViewTextBoxColumn
-            // 
-            this.numMaxDistribuidoresDataGridViewTextBoxColumn.DataPropertyName = "NumMaxDistribuidores";
-            this.numMaxDistribuidoresDataGridViewTextBoxColumn.HeaderText = "NumMaxDistribuidores";
-            this.numMaxDistribuidoresDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.numMaxDistribuidoresDataGridViewTextBoxColumn.Name = "numMaxDistribuidoresDataGridViewTextBoxColumn";
-            this.numMaxDistribuidoresDataGridViewTextBoxColumn.ReadOnly = true;
-            this.numMaxDistribuidoresDataGridViewTextBoxColumn.Visible = false;
-            this.numMaxDistribuidoresDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // produtoAlimentarBindingSource
-            // 
-            this.produtoAlimentarBindingSource.DataSource = typeof(trabalhoGrupoClasses.ProdutoAlimentar);
-            // 
-            // btnLimparEscolha
-            // 
-            this.btnLimparEscolha.Location = new System.Drawing.Point(625, 30);
-            this.btnLimparEscolha.Name = "btnLimparEscolha";
-            this.btnLimparEscolha.Size = new System.Drawing.Size(75, 23);
-            this.btnLimparEscolha.TabIndex = 94;
-            this.btnLimparEscolha.Text = "Limpar Escolha";
-            this.btnLimparEscolha.UseVisualStyleBackColor = true;
-            this.btnLimparEscolha.Click += new System.EventHandler(this.btnLimparEscolha_Click);
-            // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -448,10 +422,10 @@
             this.Text = "MyChef";
             this.Load += new System.EventHandler(this.Home_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgProdutos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.produtoAlimentarBindingSource)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.produtoAlimentarBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -491,7 +465,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn nomeDistribuidorPrincipalDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn numMaxDistribuidoresDataGridViewTextBoxColumn;
         private System.Windows.Forms.Button btnInfoNutricinal;
-        private System.Windows.Forms.Button btnPesquisaId;
-        private System.Windows.Forms.Button btnLimparEscolha;
     }
 }
