@@ -269,7 +269,7 @@
             this.txtCodigoID.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtCodigoID.Name = "txtCodigoID";
             this.txtCodigoID.ReadOnly = true;
-            this.txtCodigoID.Size = new System.Drawing.Size(107, 22);
+            this.txtCodigoID.Size = new System.Drawing.Size(114, 22);
             this.txtCodigoID.TabIndex = 94;
             // 
             // label6

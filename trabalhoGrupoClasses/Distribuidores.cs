@@ -58,14 +58,19 @@ namespace trabalhoGrupoClasses
                 if (umProduto.RegistarDistribuidor(nome, custo))
                 {
                     MessageBox.Show("Distribuidor registado com sucesso.");
+                    txtNomeNovoDistrib.ResetText();
+                    txtCustoNovoProd.ResetText();
                 }
-                else MessageBox.Show("Distribuidor não foi registado.");
+                else MessageBox.Show("Distribuidor não foi registado, número máximo excedido", "Distribuidores", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            } else if (nome.Length == 0 && custo > 0 || nome.Length > 0 && custo == 0)
+            {
+                MessageBox.Show("Para registar um distribuidor com nome e custo, ambos os campos têm que ser preenchidos.", "Distribuidores", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
             else if (umProduto.RegistarDistribuidor())
             {
-                MessageBox.Show("Distribuidor registado com sucesso.");
+                MessageBox.Show("Distribuidor registado com sucesso.","Distribuidores", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-            else MessageBox.Show("Distribuidor não foi registado.");
+            else MessageBox.Show("Distribuidor não foi registado, número máximo excedido", "Distribuidores", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             PopularCampos();
 

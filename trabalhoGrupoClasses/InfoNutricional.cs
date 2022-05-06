@@ -22,6 +22,26 @@ namespace trabalhoGrupoClasses
             produtoAMostrar = umProdutoAMostrar;
         }
 
+        public void PopularCampos()
+        {
+            txtNomeProduto.Text = produtoAMostrar.Nome;
+            txtPeso.Text = produtoAMostrar.Peso.ToString();
+            txtCalorias.Text = produtoAMostrar.CalcNutricionalTotal().ToString();
+
+            if (produtoAMostrar.ESaudavel())
+                txtSaudavel.Text = "Sim";
+            else txtSaudavel.Text = "Não";
+
+            //----
+            txtProteina.Text = produtoAMostrar.VMProteinas.ToString();
+            txtLipidos.Text = produtoAMostrar.VMLipidos.ToString();
+            txtHidratosdeCarbono.Text = produtoAMostrar.VMHidratos.ToString();
+
+            if(produtoAMostrar.Alergenios)
+                txtAlegenios.Text = "Sim";
+            else txtAlegenios.Text = "Não";
+        }
+
         private void btnAnterior_Click(object sender, EventArgs e)
         {
             m_formPai.Location = this.Location;
@@ -31,7 +51,7 @@ namespace trabalhoGrupoClasses
 
         private void InfoNutricional_Load(object sender, EventArgs e)
         {
-
+            PopularCampos();
         }
     }
 }
