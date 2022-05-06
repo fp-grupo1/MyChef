@@ -37,10 +37,10 @@ namespace trabalhoGrupoClasses
             get { return p_custo; }
             set
             {
-                if (value>=0)
+                if (value >= 0)
                 {
                     p_custo = value;
-                }                 
+                }
             }
         }
 
@@ -48,11 +48,11 @@ namespace trabalhoGrupoClasses
         public double VMProteinas
         {
             get { return p_vMProteinas; }
-            set 
+            set
             {
-                if (value>=0) 
+                if (value >= 0)
                 {
-                    p_vMProteinas = value; 
+                    p_vMProteinas = value;
                 }
             }
         }
@@ -61,11 +61,11 @@ namespace trabalhoGrupoClasses
         public double VMLipidos
         {
             get { return p_vMLipidos; }
-            set 
+            set
             {
                 if (value >= 0)
                 {
-                    p_vMLipidos = value; 
+                    p_vMLipidos = value;
                 }
             }
         }
@@ -74,7 +74,7 @@ namespace trabalhoGrupoClasses
         public double VMHidratos
         {
             get { return p_vMHidratos; }
-            set 
+            set
             {
                 if (value >= 0)
                 {
@@ -92,7 +92,7 @@ namespace trabalhoGrupoClasses
         public double Peso
         {
             get { return p_peso; }
-            set 
+            set
             {
                 if (value >= 0)
                 {
@@ -122,18 +122,18 @@ namespace trabalhoGrupoClasses
         // Devolve o número de calorias por 100g de produto através da soma dos macronutrientes presentes
         public double CalcNutricionalMedio()
         {
-            
+
             int lipidos = 9;
             int proteina = 4;
             int hidratos = 4;
             double resultado = 0;
-            resultado = p_vMLipidos * lipidos +p_vMHidratos * hidratos + p_vMProteinas * proteina;
+            resultado = p_vMLipidos * lipidos + p_vMHidratos * hidratos + p_vMProteinas * proteina;
             return resultado;
         }
 
         // Devolve o total de calorias de um produto alimentar, tendo em conta o seu peso
         public virtual double CalcNutricionalTotal()
-        {            
+        {
             double resultado = 0;
             resultado = CalcNutricionalMedio() * p_peso / 100;
             return resultado;
@@ -141,7 +141,7 @@ namespace trabalhoGrupoClasses
 
         // Devolve a margem de comercialização de um produto, correspondente a 10% do custo
         public virtual double CalcMargem()
-        {            
+        {
             double resultado = 0;
             resultado = p_custo * 0.1;
             return resultado;
@@ -149,7 +149,7 @@ namespace trabalhoGrupoClasses
 
         // Devolve o PVP, que é a soma do custo com a margem de comercialização
         public virtual double CalcPVP()
-        {           
+        {
             double resultado = 0;
             resultado = p_custo + CalcMargem();
             return resultado;
@@ -157,19 +157,20 @@ namespace trabalhoGrupoClasses
 
         // É implementado nas classes filhas, devolve se um produto é saudável
         public abstract bool ESaudavel();
-        
+
 
         public abstract string TipoToString();
         // Devolve o sucesso ou não do registo de um novo distribuidor,
         // incrementando o número de distribuidores se não ultrapassar o número máximo de distribuidores
         public bool RegistarDistribuidor()
-        {            
-            if(NumDistribuidores < NumMaxDistribuidores)
+        {
+            if (NumDistribuidores < NumMaxDistribuidores)
             {
                 p_numDistribuidores++;
                 return true;
-            } else return false;
-            
+            }
+            else return false;
+
         }
 
         // Recebendo um nome e o custo do produto, incrementando o número de distribuidores se não ultrapassar o número máximo de distribuidores
@@ -198,7 +199,7 @@ namespace trabalhoGrupoClasses
             else return false;
 
         }
-        
+
 
         public ProdutoAlimentar(string codigo, string nome, double peso, int maxDistribuidores)
         {
@@ -208,7 +209,7 @@ namespace trabalhoGrupoClasses
             p_vMProteinas = 0;
             p_vMLipidos = 0;
             p_vMHidratos = 0;
-            p_alergenio = true;            
+            p_alergenio = true;
             p_peso = peso;
             p_numDistribuidores = 0;
             p_nomeDistribuidorPrincipal = "";

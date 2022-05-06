@@ -25,13 +25,13 @@ namespace trabalhoGrupoClasses
 
         //  Todos os produtos naturais são saudáveis
         public override bool ESaudavel()
-        {            
+        {
             return true;
         }
 
-        public override string TipoToString() 
+        public override string TipoToString()
         {
-            return "Produto Natural"; 
+            return "Produto Natural";
         }
 
         public ProdutoNatural(string codigo, string nome, double peso) : base(codigo, nome, peso, 5)
