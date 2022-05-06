@@ -8,13 +8,17 @@ namespace trabalhoGrupoClasses
 {
     public static class Repositorio
     {
-
-
-      
-
-
-
-
-
+        //private static List<ProdutoAlimentar> products = new List<ProdutoAlimentar>();
+        //public static List<Product> Products
+        //{
+        //    get
+        //    {
+        //        return products;
+        //    }
+        //}
+        //public static void AddProduct(Product newProduct)
+        //{
+        //    products.Add(newProduct);
+        //}
     }
 }

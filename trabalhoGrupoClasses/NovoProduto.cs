@@ -29,6 +29,7 @@ namespace trabalhoGrupoClasses
             gbProdutoNatural.Hide();
             gbProdutoProcessado.Hide();
             gbRefeicaoPronta.Hide();
+            ApagarInformaçãoAnteriorProduto();
         }
 
         private void btnAnterior_Click(object sender, EventArgs e)
@@ -39,119 +40,115 @@ namespace trabalhoGrupoClasses
 
         }
 
-
-        private void btnRegistarTipo_Click(object sender, EventArgs e)
+        private bool CamposGeraisPreenchidos()
         {
-            string tipoDeProduto = cbTipo.Text;
-            switch (tipoDeProduto)
+            if (txtCodigoID.Text != "" && txtNomeProduto.Text != "" && numPeso.Value != 0 && numCusto.Value != 0 && txtPrefixoCodigo.Text != "")
+                return true;
+            else
             {
-                case "Produto Natural":
-                    umProdutoAlimentar = new ProdutoNatural(txtCodigoID.Text, txtNomeProduto.Text, Convert.ToDouble(txtPeso.Text));
-                    (umProdutoAlimentar as ProdutoNatural).Origem = txtPais.Text;
-                    (umProdutoAlimentar as ProdutoNatural).Biologico = cbBiologico.Checked;
-                    break;
-                case "Produto Processado":
-                    umProdutoAlimentar = new ProdutoProcessado(txtCodigoID.Text, txtNomeProduto.Text, Convert.ToDouble(txtPeso.Text), txtMarca.Text);
-                    (umProdutoAlimentar as ProdutoProcessado).Marca = txtMarca.Text;
-                    (umProdutoAlimentar as ProdutoProcessado).UnidadesEmbalagem = Convert.ToInt32(numUnidades.Value);
-                    (umProdutoAlimentar as ProdutoProcessado).Validade = Convert.ToInt32(numValidade.Value);
-                    break;
-                case "Refeição Pronta":
-                    umProdutoAlimentar = new RefeicaoPronta(txtCodigoID.Text, txtNomeProduto.Text, Convert.ToDouble(txtPeso.Text), txtMarca.Text);
-                    (umProdutoAlimentar as RefeicaoPronta).Marca = txtMarca.Text;
-                    (umProdutoAlimentar as RefeicaoPronta).UnidadesEmbalagem = Convert.ToInt32(numUnidades.Value);
-                    (umProdutoAlimentar as RefeicaoPronta).Validade = Convert.ToInt32(numValidade.Value);
-                    (umProdutoAlimentar as RefeicaoPronta).ModoPreparacao = txtModoPrep.Text;
-                    (umProdutoAlimentar as RefeicaoPronta).TempoPreparacao = Convert.ToInt32(numTempoPrep.Value);
-                    (umProdutoAlimentar as RefeicaoPronta).Gourmet = cbGourmet.Checked;
-                    break;
-                default:
-                    gbProdutoNatural.Hide();
-                    gbProdutoProcessado.Hide();
-                    gbRefeicaoPronta.Hide();
-                    ApagarInformaçãoAnteriorProduto();
-                    MessageBox.Show(
-                        "Tipo de Produto Alimentar, " + cbTipo.Text + ", não existe.",
-                        "Tipo Inválido",
-                        MessageBoxButtons.OK,
-                        MessageBoxIcon.Information);
-                    break;
+                MessageBox.Show("Existem campos por preencher. Preencha os campos para registar um novo produto.", "Campos Gerais", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return false;
             }
         }
-        //{
-        //    if (cbTipo.Text == "Produto Natural")
-        //    {
-        //        umProdutoAlimentar = new ProdutoNatural(txtCodigoID.Text, txtNomeProduto.Text, Convert.ToDouble(txtPeso.Text));
-        //        RegistarInfoProduto();
-        //        txtPais.Enabled = true;
-        //        cbBiologico.Enabled = true;
-        //    }
-        //    else if (cbTipo.Text == "Produto Processado")
-        //    {
-        //        umProdutoAlimentar = new ProdutoProcessado(txtCodigoID.Text, txtNomeProduto.Text, Convert.ToDouble(txtPeso.Text), txtMarca.Text);
-        //        RegistarInfoProduto();
-        //        txtMarca.Enabled = true;
-        //        numUnidades.Enabled = true;
-        //        numValidade.Enabled = true;
-        //    }
-        //    else
-        //    {
-        //        umProdutoAlimentar = new RefeicaoPronta(txtCodigoID.Text, txtNomeProduto.Text, Convert.ToDouble(txtPeso.Text), txtMarca.Text);
-        //        RegistarInfoProduto();
-        //        txtModoPrep.Enabled = true;
-        //        numTempoPrep.Enabled = true;
-        //        cbGourmet.Enabled = true;
-        //    }
-        //    btnRegistoProduto.Enabled = true;
-        //    btnRegistarTipo.Enabled = false;
-        //    listaDeProdutos.Add(umProdutoAlimentar);
-        //    MessageBox.Show("A informação inicial do produto alimentar " + cbTipo.Text + " foi inserida com sucesso, finalize o resto da informação para o tipo de produto que escolheu.");
-        //}
+
+        private bool MarcaPreenchida()
+        {
+            if (txtMarca.Text != "")
+                return true;
+            else
+            {                
+                return false;
+            }
+        }
+
+        private bool NutricionalTotalCheck()
+        {
+            double proteina = Convert.ToDouble(numProteinas.Value);
+            double lipidos = Convert.ToDouble(numLipidos.Value);
+            double hidratos = Convert.ToDouble(numHidratos.Value);
+
+            if (proteina + lipidos + hidratos > 100)
+            {
+                MessageBox.Show("Valores Nutricionais por 100g excedem 100g", "Valores Nutricionais", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return false;
+            }
+                
+            else return true;
+        }
 
         private void RegistarInfoProduto()
         {
-            umProdutoAlimentar.Custo = Convert.ToDouble(txtCusto.Text);
-            umProdutoAlimentar.VMProteinas = Convert.ToDouble(numProteinas.Value);
-            umProdutoAlimentar.VMLipidos = Convert.ToDouble(numLipidos.Value);
-            umProdutoAlimentar.VMHidratos = Convert.ToDouble(numHidratos.Value);
+            umProdutoAlimentar.Custo = Convert.ToDouble(numCusto.Value);
             umProdutoAlimentar.Alergenios = chAlergénios.Checked;
 
+            umProdutoAlimentar.VMProteinas = Convert.ToDouble(numProteinas.Value);
+            umProdutoAlimentar.VMLipidos = Convert.ToDouble(numLipidos.Value);
+            umProdutoAlimentar.VMHidratos = Convert.ToDouble(numHidratos.Value);           
         }
 
         private void btnRegistoProduto_Click(object sender, EventArgs e)
         {
-            if (umProdutoAlimentar is ProdutoNatural)
+            string tipoDeProduto = cbTipo.Text;
+
+            if (NutricionalTotalCheck() && CamposGeraisPreenchidos())
             {
-                ProdutoNatural produtoNatural = (ProdutoNatural)umProdutoAlimentar;
-                produtoNatural.Origem = txtPais.Text;
-                produtoNatural.Biologico = cbBiologico.Checked;
-            }
-            else if (umProdutoAlimentar is RefeicaoPronta) // se a condição for is ProdutoProcessado primeiro do que is RefeicaoPronta e tentar introduzir os valores
-                                                           // de Refeição Pronta irá associar a classe ProdutoProcessado sendo ela derivada.
-            {
-                RefeicaoPronta refeicaoPronta = (RefeicaoPronta)umProdutoAlimentar;
-                refeicaoPronta.ModoPreparacao = txtModoPrep.Text;
-                refeicaoPronta.TempoPreparacao = Convert.ToInt32(numTempoPrep.Value);
-                refeicaoPronta.Gourmet = cbGourmet.Checked;
-            }
-            else
-            {
-                ProdutoProcessado produtoProcessado = (ProdutoProcessado)umProdutoAlimentar;
-                produtoProcessado.Marca = txtMarca.Text;
-                produtoProcessado.UnidadesEmbalagem = Convert.ToInt32(numUnidades.Value);
-                produtoProcessado.Validade = Convert.ToInt32(numValidade.Value);
-            }
-            btnCalcular.Enabled = true;
-            btnCriarNovo.Enabled = true;
-            btnRegistoProduto.Enabled = false;
-            MessageBox.Show("Introdução de Produto Alimentar completo! Pode também calcular a margem de comercialização e o PVP do seu produto.");
+                //Registar dados especificos à categoria do produto
+                switch (tipoDeProduto)
+                {
+                    case "Produto Natural":                        
+                        {
+                            
+                            umProdutoAlimentar = new ProdutoNatural(txtPrefixoCodigo.Text + txtCodigoID.Text, txtNomeProduto.Text, Convert.ToDouble(numPeso.Value));
+                            RegistarInfoProduto();
+                            (umProdutoAlimentar as ProdutoNatural).Origem = txtPais.Text;
+                            (umProdutoAlimentar as ProdutoNatural).Biologico = cbBiologico.Checked;
+                            listaDeProdutos.Add(umProdutoAlimentar);
+                        }                        
+                        break;
+                    case "Produto Processado":
+                        if (MarcaPreenchida())
+                        {                        
+                            umProdutoAlimentar = new ProdutoProcessado(txtCodigoID.Text, txtNomeProduto.Text, Convert.ToDouble(numPeso.Value), txtMarca.Text);
+                            RegistarInfoProduto();
+                            (umProdutoAlimentar as ProdutoProcessado).Marca = txtMarca.Text;
+                            (umProdutoAlimentar as ProdutoProcessado).UnidadesEmbalagem = Convert.ToInt32(numUnidades.Value);
+                            (umProdutoAlimentar as ProdutoProcessado).Validade = Convert.ToInt32(numValidade.Value);
+                            listaDeProdutos.Add(umProdutoAlimentar);
+                        } else MessageBox.Show("A marca do produto tem que ser preenchida.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        break;                    
+                        
+                    case "Refeição Pronta":
+                        if (MarcaPreenchida())
+                        {                            
+                            umProdutoAlimentar = new RefeicaoPronta(txtCodigoID.Text, txtNomeProduto.Text, Convert.ToDouble(numPeso.Value), txtMarca.Text);
+                            RegistarInfoProduto();
+                            (umProdutoAlimentar as RefeicaoPronta).Marca = txtMarca.Text;
+                            (umProdutoAlimentar as RefeicaoPronta).UnidadesEmbalagem = Convert.ToInt32(numUnidades.Value);
+                            (umProdutoAlimentar as RefeicaoPronta).Validade = Convert.ToInt32(numValidade.Value);
+                            (umProdutoAlimentar as RefeicaoPronta).ModoPreparacao = txtModoPrep.Text;
+                            (umProdutoAlimentar as RefeicaoPronta).TempoPreparacao = Convert.ToInt32(numTempoPrep.Value);
+                            (umProdutoAlimentar as RefeicaoPronta).Gourmet = cbGourmet.Checked;
+                            listaDeProdutos.Add(umProdutoAlimentar);
+                        }
+                        else MessageBox.Show("A marca do produto tem que ser preenchida.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        break;
+                    default:
+                        gbProdutoNatural.Hide();
+                        gbProdutoProcessado.Hide();
+                        gbRefeicaoPronta.Hide();
+                        ApagarInformaçãoAnteriorProduto();
+                        MessageBox.Show(
+                            "Tipo de Produto não existe.",
+                            "Tipo Inválido",
+                            MessageBoxButtons.OK,
+                            MessageBoxIcon.Information);
+                        break;
+                }             
+                //lista de produtos .add
+                
+            }            
         }
 
-        private void btnCalcular_Click(object sender, EventArgs e)
-        {
-            txtMargem.Text = umProdutoAlimentar.CalcMargem().ToString();
-            txtPVP.Text = umProdutoAlimentar.CalcPVP().ToString();
-        }
         private void btnCriarNovo_Click(object sender, EventArgs e)
         {
             ApagarInformaçãoAnteriorProduto();
@@ -163,35 +160,36 @@ namespace trabalhoGrupoClasses
 
         private void ApagarInformaçãoAnteriorProduto()
         {
-            //Produto ALimentar
+            //Produto Alimentar
+            txtPrefixoCodigo.Text = "";
             txtCodigoID.Text = "";
             txtNomeProduto.Text = "";
-            txtPeso.Text = "";
-            txtCusto.Text = "";
+            numPeso.Value = 0;
+            numCusto.Value = 0;
             cbTipo.Text = "";
-            chAlergénios.Checked = false;
+            chAlergénios.Checked = true;
             numHidratos.Value = 0;
             numLipidos.Value = 0;
             numProteinas.Value = 0;
             //Produtos Biologicos
-            txtPais.Text = "";
-            txtPais.Enabled = false;
-            cbBiologico.Checked = false;
-            cbBiologico.Enabled = false;
+            txtPais.Text = "Portugal";
+            //txtPais.Enabled = false;
+            cbBiologico.Checked = true;
+            //cbBiologico.Enabled = false;
             //Refeição Pronta
             txtModoPrep.Text = "";
-            txtModoPrep.Enabled = false;
+            //txtModoPrep.Enabled = false;
             numTempoPrep.Value = 0;
-            numTempoPrep.Enabled = false;
+            //numTempoPrep.Enabled = false;
             cbGourmet.Checked = false;
-            cbGourmet.Enabled = false;
+            //cbGourmet.Enabled = false;
             //Produto Processado
             txtMarca.Text = "";
-            txtMarca.Enabled = false;
+            //txtMarca.Enabled = false;
             numUnidades.Value = 0;
-            numUnidades.Enabled = false;
+            //numUnidades.Enabled = false;
             numValidade.Value = 0;
-            numValidade.Enabled = false;
+            //numValidade.Enabled = false;
         }
         private void MensagemTipoDesconhecido()
         {
@@ -200,7 +198,7 @@ namespace trabalhoGrupoClasses
             gbRefeicaoPronta.Hide();
             ApagarInformaçãoAnteriorProduto();
             MessageBox.Show(
-                "Tipo de Produto Alimentar, " + cbTipo.Text + ", não existe.",
+                "Tipo de Produto não existe.",
                 "Tipo Inválido",
                 MessageBoxButtons.OK,
                 MessageBoxIcon.Information);
@@ -212,16 +210,19 @@ namespace trabalhoGrupoClasses
             switch (tipoDeProduto)
             {
                 case "Produto Natural":
+                    txtPrefixoCodigo.Text = "PN";
                     gbRefeicaoPronta.Hide();
                     gbProdutoProcessado.Hide();
                     gbProdutoNatural.Show();
                     break;
                 case "Produto Processado":
+                    txtPrefixoCodigo.Text = "PP";
                     gbRefeicaoPronta.Hide();
                     gbProdutoProcessado.Show();
                     gbProdutoNatural.Hide();
                     break;
                 case "Refeição Pronta":
+                    txtPrefixoCodigo.Text = "RP";
                     gbRefeicaoPronta.Show();
                     gbProdutoProcessado.Show();
                     gbProdutoNatural.Hide();
@@ -230,6 +231,36 @@ namespace trabalhoGrupoClasses
                     MensagemTipoDesconhecido();
                     break;
             }
+        }
+
+        private void btnSimular_Click(object sender, EventArgs e)
+        {
+            double custo = Convert.ToDouble(numCustoSimular.Value);
+
+
+            txtMargem.Text = CalcMargem(custo).ToString();
+            txtPVP.Text = CalcPVP(custo).ToString();
+        }
+
+        public virtual double CalcMargem(double valor)
+        {
+            double resultado = 0;
+            resultado = valor * 0.1;
+            return resultado;
+        }
+
+        //Utilizado para calcular antes da criação de um produto
+        public virtual double CalcPVP(double valor)
+        {
+            double resultado = 0;
+            resultado = valor + CalcMargem(valor);
+            return resultado;
+        }
+
+        private void numCustoSimular_ValueChanged(object sender, EventArgs e)
+        {
+            if(numCusto.Value != 0)
+                numCustoSimular.Value = numCusto.Value;
         }
     }
 }

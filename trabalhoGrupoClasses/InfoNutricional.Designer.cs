@@ -47,7 +47,7 @@
             this.txtHidratosdeCarbono = new System.Windows.Forms.TextBox();
             this.txtCalorias = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtAlegenios = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.txtSaudavel = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
@@ -243,14 +243,14 @@
             this.label6.TabIndex = 103;
             this.label6.Text = "Calorias";
             // 
-            // textBox1
+            // txtAlegenios
             // 
-            this.textBox1.Location = new System.Drawing.Point(125, 377);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(85, 22);
-            this.textBox1.TabIndex = 106;
+            this.txtAlegenios.Location = new System.Drawing.Point(125, 377);
+            this.txtAlegenios.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtAlegenios.Name = "txtAlegenios";
+            this.txtAlegenios.ReadOnly = true;
+            this.txtAlegenios.Size = new System.Drawing.Size(85, 22);
+            this.txtAlegenios.TabIndex = 106;
             // 
             // label7
             // 
@@ -288,7 +288,7 @@
             this.ClientSize = new System.Drawing.Size(932, 463);
             this.Controls.Add(this.txtSaudavel);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtAlegenios);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.txtCalorias);
             this.Controls.Add(this.label6);
@@ -338,7 +338,7 @@
         private System.Windows.Forms.TextBox txtHidratosdeCarbono;
         private System.Windows.Forms.TextBox txtCalorias;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtAlegenios;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtSaudavel;
         private System.Windows.Forms.Label label8;
