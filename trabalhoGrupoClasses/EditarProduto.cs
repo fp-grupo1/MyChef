@@ -12,10 +12,9 @@ namespace trabalhoGrupoClasses
 {
     public partial class EditarProduto : Form
     {
-        ProdutoAlimentar produto;
+      
 
         private Form m_formPai;
-
         private ProdutoAlimentar produtoAEditar;
         public EditarProduto(Form formPai, ProdutoAlimentar produto)
         {
@@ -31,7 +30,7 @@ namespace trabalhoGrupoClasses
             PopularCampos();
 
             // Produto Natural
-            if (produto is ProdutoNatural)
+            if (produtoAEditar is ProdutoNatural)
             {
                 gbProdutoNatural.Visible = true;
                 gbProdutoProcessado.Visible = false;
@@ -40,7 +39,7 @@ namespace trabalhoGrupoClasses
             }
                 
             // Produto Processado 
-            if (produto is ProdutoProcessado)
+            if (produtoAEditar is ProdutoProcessado)
             {
                 gbProdutoNatural.Visible = false;
                 gbProdutoProcessado.Visible = true;
@@ -49,7 +48,7 @@ namespace trabalhoGrupoClasses
             }
                                 
             // Refeição Pronta
-            if (produto is RefeicaoPronta)
+            if (produtoAEditar is RefeicaoPronta)
             {
                 gbProdutoNatural.Visible = false;
                 gbProdutoProcessado.Visible = true;
@@ -63,21 +62,21 @@ namespace trabalhoGrupoClasses
         private void PopularCampos()
         {
             //Geral
-            txtCodigoID.Text = produto.IdCod.ToString();
-            txtNomeProduto.Text = produto.Nome;
-            txtPeso.Text = produto.Peso.ToString();
-            numCusto.Value = Convert.ToDecimal(produto.Custo);
-            cbAlergénios.Checked = produto.Alergenios;
+            txtCodigoID.Text = produtoAEditar.IdCod.ToString();
+            txtNomeProduto.Text = produtoAEditar.Nome;
+            txtPeso.Text = produtoAEditar.Peso.ToString();
+            numCusto.Value = Convert.ToDecimal(produtoAEditar.Custo);
+            cbAlergénios.Checked = produtoAEditar.Alergenios;
 
             PopularNutricionais();
 
-            if (produto is ProdutoNatural)
+            if (produtoAEditar is ProdutoNatural)
             {
                 cmbTipo.SelectedIndex = 0;
-            } else if (produto is ProdutoProcessado)
+            } else if (produtoAEditar is ProdutoProcessado)
             {
                 cmbTipo.SelectedIndex = 1;
-            } else if (produto is RefeicaoPronta)
+            } else if (produtoAEditar is RefeicaoPronta)
             {
                 cmbTipo.SelectedIndex = 2;
             }
@@ -86,36 +85,36 @@ namespace trabalhoGrupoClasses
         private void PopularNutricionais()
         {
             // Valores Nutricionais
-            numHidratos.Value = Convert.ToDecimal(produto.VMHidratos);
-            numLipidos.Value = Convert.ToDecimal(produto.VMLipidos);
-            numProteinas.Value = Convert.ToDecimal(produto.VMProteinas);
+            numHidratos.Value = Convert.ToDecimal(produtoAEditar.VMHidratos);
+            numLipidos.Value = Convert.ToDecimal(produtoAEditar.VMLipidos);
+            numProteinas.Value = Convert.ToDecimal(produtoAEditar.VMProteinas);
         }        
 
         private void PopularNatural()
         {
             // Produto Natural            
-            txtPais.Text = ((ProdutoNatural)produto).Origem;
-            cbBiologico.Checked = ((ProdutoNatural)produto).Biologico;
-            cbSaudavel.Checked = produto.ESaudavel();
+            txtPais.Text = ((ProdutoNatural)produtoAEditar).Origem;
+            cbBiologico.Checked = ((ProdutoNatural)produtoAEditar).Biologico;
+            cbSaudavel.Checked = produtoAEditar.ESaudavel();
         }
 
         private void PopularProcessado()
         {
             // Produto Processado           
-            txtMarca.Text = ((ProdutoProcessado)produto).Marca;
-            numUnidades.Value = ((ProdutoProcessado)produto).UnidadesEmbalagem;
-            numValidade.Value = ((ProdutoProcessado)produto).Validade;
-            cbSaudavel.Checked = produto.ESaudavel();
+            txtMarca.Text = ((ProdutoProcessado)produtoAEditar).Marca;
+            numUnidades.Value = ((ProdutoProcessado)produtoAEditar).UnidadesEmbalagem;
+            numValidade.Value = ((ProdutoProcessado)produtoAEditar).Validade;
+            cbSaudavel.Checked = produtoAEditar.ESaudavel();
         }
 
         private void PopularRefeicaoPronta()
         {
             // Refeição Pronta
             PopularProcessado();
-            txtModoPrep.Text = ((RefeicaoPronta)produto).ModoPreparacao;
-            numTempoPrep.Value = ((RefeicaoPronta)produto).TempoPreparacao;
-            cbGourmet.Checked = ((RefeicaoPronta)produto).Gourmet;
-            cbSaudavel.Checked = produto.ESaudavel();
+            txtModoPrep.Text = ((RefeicaoPronta)produtoAEditar).ModoPreparacao;
+            numTempoPrep.Value = ((RefeicaoPronta)produtoAEditar).TempoPreparacao;
+            cbGourmet.Checked = ((RefeicaoPronta)produtoAEditar).Gourmet;
+            cbSaudavel.Checked = produtoAEditar.ESaudavel();
         }
 
         //-------------------------------------------------------------------
@@ -123,24 +122,24 @@ namespace trabalhoGrupoClasses
         private void GuardarAlteracoes()
         {
             //Geral
-            produto.Nome = txtNomeProduto.Text;
-            produto.Peso = Convert.ToInt32(txtPeso.Text);
-            produto.Custo = Convert.ToDouble(numCusto.Value);
-            produto.Alergenios = cbAlergénios.Checked;
+            produtoAEditar.Nome = txtNomeProduto.Text;
+            produtoAEditar.Peso = Convert.ToInt32(txtPeso.Text);
+            produtoAEditar.Custo = Convert.ToDouble(numCusto.Value);
+            produtoAEditar.Alergenios = cbAlergénios.Checked;
 
-            produto.VMHidratos = Convert.ToDouble(numHidratos.Value);
-            produto.VMLipidos = Convert.ToDouble(numLipidos.Value);
-            produto.VMProteinas = Convert.ToDouble(numProteinas.Value);
+            produtoAEditar.VMHidratos = Convert.ToDouble(numHidratos.Value);
+            produtoAEditar.VMLipidos = Convert.ToDouble(numLipidos.Value);
+            produtoAEditar.VMProteinas = Convert.ToDouble(numProteinas.Value);
 
-            if (produto is ProdutoNatural)
+            if (produtoAEditar is ProdutoNatural)
             {
                 GuardarNatural();
             }
-            else if (produto is ProdutoProcessado)
+            else if (produtoAEditar is ProdutoProcessado)
             {
                 GuardarProcessado();
             }
-            else if (produto is RefeicaoPronta)
+            else if (produtoAEditar is RefeicaoPronta)
             {
                 GuardarRefeicaoPronta();
             }
@@ -149,24 +148,24 @@ namespace trabalhoGrupoClasses
         private void GuardarNatural()
         {
             // Produto Natural            
-            ((ProdutoNatural)produto).Origem = txtPais.Text;
-            ((ProdutoNatural)produto).Biologico = cbBiologico.Checked;
+            ((ProdutoNatural)produtoAEditar).Origem = txtPais.Text;
+            ((ProdutoNatural)produtoAEditar).Biologico = cbBiologico.Checked;
         }
 
         private void GuardarProcessado()
         {
             // Produto Processado           
-            ((ProdutoProcessado)produto).Marca = txtMarca.Text;
-            ((ProdutoProcessado)produto).UnidadesEmbalagem = Convert.ToInt32(numUnidades.Value);
-            ((ProdutoProcessado)produto).Validade = Convert.ToInt32(numValidade.Value);
+            ((ProdutoProcessado)produtoAEditar).Marca = txtMarca.Text;
+            ((ProdutoProcessado)produtoAEditar).UnidadesEmbalagem = Convert.ToInt32(numUnidades.Value);
+            ((ProdutoProcessado)produtoAEditar).Validade = Convert.ToInt32(numValidade.Value);
         }
 
         private void GuardarRefeicaoPronta()
         {
             GuardarProcessado();
-            ((RefeicaoPronta)produto).ModoPreparacao = txtModoPrep.Text;
-            ((RefeicaoPronta)produto).TempoPreparacao = Convert.ToInt32(numTempoPrep.Value);
-            ((RefeicaoPronta)produto).Gourmet = cbGourmet.Checked;
+            ((RefeicaoPronta)produtoAEditar).ModoPreparacao = txtModoPrep.Text;
+            ((RefeicaoPronta)produtoAEditar).TempoPreparacao = Convert.ToInt32(numTempoPrep.Value);
+            ((RefeicaoPronta)produtoAEditar).Gourmet = cbGourmet.Checked;
         }
 
 
@@ -190,7 +189,7 @@ namespace trabalhoGrupoClasses
 
         private void btnApagarProduto_Click(object sender, EventArgs e)
         {
-            var resposta = MessageBox.Show("Tem a certeza que quer apagar o produto? \n\"" + produto.IdCod + " - " + produto.Nome, "Apagar Produto", MessageBoxButtons.OKCancel, MessageBoxIcon.Exclamation);
+            var resposta = MessageBox.Show("Tem a certeza que quer apagar o produto? \n\"" + produtoAEditar.IdCod + " - " + produtoAEditar.Nome, "Apagar Produto", MessageBoxButtons.OKCancel, MessageBoxIcon.Exclamation);
             
             if(resposta == DialogResult.OK)
             {
@@ -204,9 +203,9 @@ namespace trabalhoGrupoClasses
 
         private void btnCalcular_Click(object sender, EventArgs e)
         {
-            produto.Custo = Convert.ToDouble(numCusto.Value);
-            txtMargem.Text = produto.CalcMargem().ToString();
-            txtPVP.Text = produto.CalcPVP().ToString();
+            produtoAEditar.Custo = Convert.ToDouble(numCusto.Value);
+            txtMargem.Text = produtoAEditar.CalcMargem().ToString();
+            txtPVP.Text = produtoAEditar.CalcPVP().ToString();
         }
     }
 }
