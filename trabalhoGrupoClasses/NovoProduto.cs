@@ -141,9 +141,10 @@ namespace trabalhoGrupoClasses
                 produtoProcessado.UnidadesEmbalagem = Convert.ToInt32(numUnidades.Value);
                 produtoProcessado.Validade = Convert.ToInt32(numValidade.Value);
             }
+            btnCalcular.Enabled = true;
+            btnCriarNovo.Enabled = true;
             btnRegistoProduto.Enabled = false;
-            btnRegistarTipo.Enabled = true;
-            MessageBox.Show("Introdução de Produto Alimentar completo!");
+            MessageBox.Show("Introdução de Produto Alimentar completo! Pode também calcular a margem de comercialização e o PVP do seu produto.");
         }
 
         private void btnCalcular_Click(object sender, EventArgs e)
@@ -191,7 +192,6 @@ namespace trabalhoGrupoClasses
             numUnidades.Enabled = false;
             numValidade.Value = 0;
             numValidade.Enabled = false;
-
         }
         private void MensagemTipoDesconhecido()
         {
