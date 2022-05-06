@@ -1,0 +1,258 @@
+{
+  "homepages": [],
+  "source_base_path": "C:/Users/Administrator/source/repos/fp-grupo1/MyChef/trabalhoGrupoClasses",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "Conceptual",
+      "source_relative_path": "api/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "api/index.html",
+          "hash": "efZS+4ojCo7lh7bOTnzKTqs6YEwabyWpzmkwhWP3oGI="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/intro.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/intro.html",
+          "hash": "6Ga4h2moHjy2O4yxwJxF2FO8KM2ZmNqw8+VtIJ5GBr0="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "articles/toc.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/toc.html",
+          "hash": "BlPxk5mtl2kgfcZUgkEguqiSAR/EUyUTT4EdebwkQvs="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "index.md",
+      "output": {
+        ".html": {
+          "relative_path": "index.html",
+          "hash": "VppMFMFpV1CxY0Zfg+cwpjAFBZPAvchx2+sPEua5w8g="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "obj/api/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/toc.html",
+          "hash": "aHdWMh1cLMmYaqFuo7zUzaRbQFtMrUXZJZHOdk1d8os="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/trabalhoGrupoClasses.Distribuidores.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/trabalhoGrupoClasses.Distribuidores.html",
+          "hash": "dQVrdpYFasjDN058MMZhThcP3/2zBKuITEXGtYO48k4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/trabalhoGrupoClasses.EditarProduto.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/trabalhoGrupoClasses.EditarProduto.html",
+          "hash": "KnQWwmwxjJB7APOicnakeWAYQbb2nYED46SxLwBVrpY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/trabalhoGrupoClasses.Home.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/trabalhoGrupoClasses.Home.html",
+          "hash": "WhK7YvFxEEhXxuL9mOUMooc8FkA5qNUWHtU1xxUkBzw="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/trabalhoGrupoClasses.InfoNutricional.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/trabalhoGrupoClasses.InfoNutricional.html",
+          "hash": "89+iIwAgHOhiSHU0q07Zuo79SgSdIEk/gywHpM6KmQw="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/trabalhoGrupoClasses.NovoProduto.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/trabalhoGrupoClasses.NovoProduto.html",
+          "hash": "65xxVPiFKGamkJSCuPwBa/44QJ6SGGBMTztdm2/l2t0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/trabalhoGrupoClasses.ProdutoAlimentar.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/trabalhoGrupoClasses.ProdutoAlimentar.html",
+          "hash": "OIzTziLONxFGGqzEBoSFp+FKjGh5IqQPJfQieRXrzD8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/trabalhoGrupoClasses.ProdutoNatural.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/trabalhoGrupoClasses.ProdutoNatural.html",
+          "hash": "JUPFaBPwZysgxnWI2nHZlDsAi8ruS5jDdiv3lU7Eux4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/trabalhoGrupoClasses.ProdutoProcessado.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/trabalhoGrupoClasses.ProdutoProcessado.html",
+          "hash": "2YZthQr4e5uEoOiwfjleA4eRo0pSqIbrNnP1WwScKCg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/trabalhoGrupoClasses.RefeicaoPronta.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/trabalhoGrupoClasses.RefeicaoPronta.html",
+          "hash": "w08bN/xL6+GoVpYOAXNUnqhRTO8l9a6imD346qaw8SY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/trabalhoGrupoClasses.Repositorio.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/trabalhoGrupoClasses.Repositorio.html",
+          "hash": "ZyW0NLvPirExF9LVZlUazj4a0i1sM/Wr8UojGhFqHrQ="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/trabalhoGrupoClasses.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/trabalhoGrupoClasses.html",
+          "hash": "73CtFz67JoHGtyIizuQ2mYewPCc/t4TWxdcKtGtIGjU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "toc.html",
+          "hash": "Oa9PuD4E1hvZnCkVjUgzNBX6S00Zo5YilamTERTZo54="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    }
+  ],
+  "incremental_info": [
+    {
+      "status": {
+        "can_incremental": true,
+        "incrementalPhase": "build",
+        "total_file_count": 0,
+        "skipped_file_count": 0
+      },
+      "processors": {
+        "ConceptualDocumentProcessor": {
+          "can_incremental": true,
+          "incrementalPhase": "build",
+          "total_file_count": 3,
+          "skipped_file_count": 3
+        },
+        "ManagedReferenceDocumentProcessor": {
+          "can_incremental": true,
+          "incrementalPhase": "build",
+          "total_file_count": 11,
+          "skipped_file_count": 8
+        },
+        "TocDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
+          "skipped_file_count": 0
+        }
+      }
+    },
+    {
+      "status": {
+        "can_incremental": true,
+        "details": "Can support incremental post processing.",
+        "incrementalPhase": "postProcessing",
+        "total_file_count": 0,
+        "skipped_file_count": 0
+      },
+      "processors": {}
+    }
+  ],
+  "version_info": {},
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}
