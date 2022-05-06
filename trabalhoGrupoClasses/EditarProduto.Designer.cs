@@ -30,6 +30,15 @@
         {
             this.btnAnterior = new System.Windows.Forms.Button();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.numCusto = new System.Windows.Forms.NumericUpDown();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btnCalcular = new System.Windows.Forms.Button();
+            this.txtMargem = new System.Windows.Forms.TextBox();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.txtPVP = new System.Windows.Forms.TextBox();
             this.cbSaudavel = new System.Windows.Forms.CheckBox();
             this.lblCodigoID = new System.Windows.Forms.Label();
             this.lblPeso = new System.Windows.Forms.Label();
@@ -69,16 +78,10 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btnGuardarAlteracoes = new System.Windows.Forms.Button();
             this.btnApagarProduto = new System.Windows.Forms.Button();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.txtMargem = new System.Windows.Forms.TextBox();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.txtPVP = new System.Windows.Forms.TextBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.btnCalcular = new System.Windows.Forms.Button();
-            this.numCusto = new System.Windows.Forms.NumericUpDown();
+            this.label17 = new System.Windows.Forms.Label();
             this.groupBox5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numCusto)).BeginInit();
+            this.groupBox2.SuspendLayout();
             this.gbRefeicaoPronta.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numTempoPrep)).BeginInit();
             this.gbProdutoProcessado.SuspendLayout();
@@ -89,8 +92,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.numProteinas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numLipidos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numHidratos)).BeginInit();
-            this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numCusto)).BeginInit();
             this.SuspendLayout();
             // 
             // btnAnterior
@@ -106,6 +107,7 @@
             // 
             // groupBox5
             // 
+            this.groupBox5.Controls.Add(this.label17);
             this.groupBox5.Controls.Add(this.numCusto);
             this.groupBox5.Controls.Add(this.groupBox2);
             this.groupBox5.Controls.Add(this.cbSaudavel);
@@ -125,6 +127,100 @@
             this.groupBox5.Size = new System.Drawing.Size(520, 241);
             this.groupBox5.TabIndex = 130;
             this.groupBox5.TabStop = false;
+            // 
+            // numCusto
+            // 
+            this.numCusto.DecimalPlaces = 2;
+            this.numCusto.Location = new System.Drawing.Point(168, 114);
+            this.numCusto.Maximum = new decimal(new int[] {
+            10000,
+            0,
+            0,
+            0});
+            this.numCusto.Name = "numCusto";
+            this.numCusto.Size = new System.Drawing.Size(114, 22);
+            this.numCusto.TabIndex = 123;
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.btnCalcular);
+            this.groupBox2.Controls.Add(this.txtMargem);
+            this.groupBox2.Controls.Add(this.label15);
+            this.groupBox2.Controls.Add(this.label14);
+            this.groupBox2.Controls.Add(this.label16);
+            this.groupBox2.Controls.Add(this.label13);
+            this.groupBox2.Controls.Add(this.txtPVP);
+            this.groupBox2.Location = new System.Drawing.Point(307, 81);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(189, 153);
+            this.groupBox2.TabIndex = 133;
+            this.groupBox2.TabStop = false;
+            // 
+            // btnCalcular
+            // 
+            this.btnCalcular.Location = new System.Drawing.Point(28, 119);
+            this.btnCalcular.Name = "btnCalcular";
+            this.btnCalcular.Size = new System.Drawing.Size(134, 23);
+            this.btnCalcular.TabIndex = 125;
+            this.btnCalcular.Text = "Calcular";
+            this.btnCalcular.UseVisualStyleBackColor = true;
+            this.btnCalcular.Click += new System.EventHandler(this.btnCalcular_Click);
+            // 
+            // txtMargem
+            // 
+            this.txtMargem.Location = new System.Drawing.Point(28, 39);
+            this.txtMargem.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtMargem.Name = "txtMargem";
+            this.txtMargem.ReadOnly = true;
+            this.txtMargem.Size = new System.Drawing.Size(115, 22);
+            this.txtMargem.TabIndex = 121;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(149, 90);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(14, 16);
+            this.label15.TabIndex = 122;
+            this.label15.Text = "€";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(25, 14);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(68, 19);
+            this.label14.TabIndex = 120;
+            this.label14.Text = "Margem";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.Location = new System.Drawing.Point(25, 65);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(42, 19);
+            this.label16.TabIndex = 123;
+            this.label16.Text = "PVP";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(149, 39);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(14, 16);
+            this.label13.TabIndex = 119;
+            this.label13.Text = "€";
+            // 
+            // txtPVP
+            // 
+            this.txtPVP.Location = new System.Drawing.Point(29, 89);
+            this.txtPVP.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtPVP.Name = "txtPVP";
+            this.txtPVP.ReadOnly = true;
+            this.txtPVP.Size = new System.Drawing.Size(115, 22);
+            this.txtPVP.TabIndex = 124;
             // 
             // cbSaudavel
             // 
@@ -215,7 +311,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(288, 114);
+            this.label3.Location = new System.Drawing.Point(284, 117);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(14, 16);
             this.label3.TabIndex = 98;
@@ -223,6 +319,7 @@
             // 
             // cmbTipo
             // 
+            this.cmbTipo.Enabled = false;
             this.cmbTipo.FormattingEnabled = true;
             this.cmbTipo.Items.AddRange(new object[] {
             "Produto Natural",
@@ -515,99 +612,14 @@
             this.btnApagarProduto.UseVisualStyleBackColor = true;
             this.btnApagarProduto.Click += new System.EventHandler(this.btnApagarProduto_Click);
             // 
-            // label13
+            // label17
             // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(149, 39);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(14, 16);
-            this.label13.TabIndex = 119;
-            this.label13.Text = "€";
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(25, 14);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(68, 19);
-            this.label14.TabIndex = 120;
-            this.label14.Text = "Margem";
-            // 
-            // txtMargem
-            // 
-            this.txtMargem.Location = new System.Drawing.Point(28, 39);
-            this.txtMargem.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtMargem.Name = "txtMargem";
-            this.txtMargem.ReadOnly = true;
-            this.txtMargem.Size = new System.Drawing.Size(115, 22);
-            this.txtMargem.TabIndex = 121;
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(149, 90);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(14, 16);
-            this.label15.TabIndex = 122;
-            this.label15.Text = "€";
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(25, 65);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(42, 19);
-            this.label16.TabIndex = 123;
-            this.label16.Text = "PVP";
-            // 
-            // txtPVP
-            // 
-            this.txtPVP.Location = new System.Drawing.Point(29, 89);
-            this.txtPVP.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtPVP.Name = "txtPVP";
-            this.txtPVP.ReadOnly = true;
-            this.txtPVP.Size = new System.Drawing.Size(115, 22);
-            this.txtPVP.TabIndex = 124;
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.btnCalcular);
-            this.groupBox2.Controls.Add(this.txtMargem);
-            this.groupBox2.Controls.Add(this.label15);
-            this.groupBox2.Controls.Add(this.label14);
-            this.groupBox2.Controls.Add(this.label16);
-            this.groupBox2.Controls.Add(this.label13);
-            this.groupBox2.Controls.Add(this.txtPVP);
-            this.groupBox2.Location = new System.Drawing.Point(307, 81);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(189, 153);
-            this.groupBox2.TabIndex = 133;
-            this.groupBox2.TabStop = false;
-            // 
-            // btnCalcular
-            // 
-            this.btnCalcular.Location = new System.Drawing.Point(28, 119);
-            this.btnCalcular.Name = "btnCalcular";
-            this.btnCalcular.Size = new System.Drawing.Size(134, 23);
-            this.btnCalcular.TabIndex = 125;
-            this.btnCalcular.Text = "Calcular";
-            this.btnCalcular.UseVisualStyleBackColor = true;
-            this.btnCalcular.Click += new System.EventHandler(this.btnCalcular_Click);
-            // 
-            // numCusto
-            // 
-            this.numCusto.DecimalPlaces = 2;
-            this.numCusto.Location = new System.Drawing.Point(168, 114);
-            this.numCusto.Maximum = new decimal(new int[] {
-            10000,
-            0,
-            0,
-            0});
-            this.numCusto.Name = "numCusto";
-            this.numCusto.Size = new System.Drawing.Size(114, 22);
-            this.numCusto.TabIndex = 123;
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(139, 116);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(19, 16);
+            this.label17.TabIndex = 134;
+            this.label17.Text = "gr";
             // 
             // EditarProduto
             // 
@@ -628,6 +640,9 @@
             this.Load += new System.EventHandler(this.EditarProduto_Load);
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numCusto)).EndInit();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.gbRefeicaoPronta.ResumeLayout(false);
             this.gbRefeicaoPronta.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numTempoPrep)).EndInit();
@@ -642,9 +657,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.numProteinas)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numLipidos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numHidratos)).EndInit();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numCusto)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -702,5 +714,6 @@
         private System.Windows.Forms.TextBox txtPVP;
         private System.Windows.Forms.Button btnCalcular;
         private System.Windows.Forms.NumericUpDown numCusto;
+        private System.Windows.Forms.Label label17;
     }
 }
